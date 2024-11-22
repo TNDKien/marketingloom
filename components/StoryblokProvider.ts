@@ -6,14 +6,10 @@ import {
   SbReactComponentsMap,
 } from "@storyblok/react/rsc";
 import Page from "./page.component";
-import Feature from "./Feature/Feature";
-import ThreeQuarterLayout from "./ThreeQuarterLayout/ThreeQuarterLayout";
 import Template from "./Template/Template";
 
 const components = {
   page: Page,
-  feature: Feature,
-  threequarterlayout: ThreeQuarterLayout,
   template: Template,
 };
 

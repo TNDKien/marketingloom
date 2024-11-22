@@ -1,6 +1,6 @@
 import { storyblokEditable } from "@storyblok/react/rsc";
 
-const Artikel_XS = ({ blok }) => (
+const Artikel_Container = ({ blok }) => (
   <div className=" bg-blue-500 text-white" {...storyblokEditable(blok)}>
     <h1 className=" text-4xl font-bold">{blok.Titel}</h1>
     <img
@@ -11,4 +11,4 @@ const Artikel_XS = ({ blok }) => (
   </div>
 );
 
-export default Artikel_XS;
+export default Artikel_Container;
