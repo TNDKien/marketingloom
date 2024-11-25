@@ -1,6 +1,6 @@
 import { render } from "storyblok-rich-text-react-renderer";
 
-const Article = ({ blok }) => {
+const Artikel = ({ blok }) => {
   return (
     <section className="text-gray-600 body-font">
       <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
@@ -24,4 +24,4 @@ const Article = ({ blok }) => {
     </section>
   );
 };
-export default Article;
+export default Artikel;
