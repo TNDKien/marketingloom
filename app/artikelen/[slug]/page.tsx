@@ -1,4 +1,5 @@
 import { getStoryblokApi } from "@storyblok/react"; // Adjust this import based on your setup
+import fetchData from "@utils/fetch-data";
 
 export async function getData(slug: string) {
   const storyblokApi = getStoryblokApi();
@@ -18,11 +19,10 @@ export default async function ArticlePage({
   const { content } = story; // Content fields (e.g., Titel, Afbeelding, Teaser, Content)
 
   return (
-    <article>
-      <h1>{content.Titel}</h1>
-      <img src={content.Afbeelding.filename} alt={content.Titel} />
-      <p>{content.Teaser}</p>
-      <div dangerouslySetInnerHTML={{ __html: content.Content }} />
+    <article className="flex flex-col justify-center text-center">
+      <h1 className="flex text-3xl max-w-[612px]">{content.titel}</h1>
+      <img src={content.Afbeelding.filename} alt={content.Afbeelding.alt} />
+      <p>{content.teaser}</p>
     </article>
   );
 }
