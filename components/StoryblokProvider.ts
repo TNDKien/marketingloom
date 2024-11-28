@@ -28,6 +28,7 @@ import Spreker_Hero from "./Spreker_Hero/Spreker_Hero";
 import Sticky_Component from "./Sticky_Component/Sticky_Component";
 import Tickets from "./Tickets/Tickets";
 import Verkoop from "./Verkoop/Verkoop";
+import Eyecatcher from "./Eyecatcher/Eyecatcher";
 
 const components = {
   page: Page,
@@ -53,6 +54,7 @@ const components = {
   sticky_component: Sticky_Component,
   tickets: Tickets,
   verkoop: Verkoop,
+  eyecatcher: Eyecatcher,
 };
 
 storyblokInit({
