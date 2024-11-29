@@ -7,3 +7,22 @@
 
 @layer utilities {
 }
+
+body {
+  background-color: #f5f3f5;
+  color: #161616;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+p {
+  padding-bottom: 12px;
+}
