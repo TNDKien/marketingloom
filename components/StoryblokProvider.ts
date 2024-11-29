@@ -28,6 +28,9 @@ import Spreker_Hero from "./Spreker_Hero/Spreker_Hero";
 import Sticky_Component from "./Sticky_Component/Sticky_Component";
 import Tickets from "./Tickets/Tickets";
 import Verkoop from "./Verkoop/Verkoop";
+import AlleArtikelen from "./AlleArtikelen/AlleArtikelen";
+import Populaire_Artikelen from "./Populaire_Artikelen/Populaire_Artikelen";
+import ArtikelTeaser from "./ArtikelTeaser/ArtikelTeaser";
 
 const components = {
   page: Page,
@@ -53,6 +56,9 @@ const components = {
   sticky_component: Sticky_Component,
   tickets: Tickets,
   verkoop: Verkoop,
+  alleartikelen: AlleArtikelen,
+  populaire_artikelen: Populaire_Artikelen,
+  artikelteaser: ArtikelTeaser,
 };
 
 storyblokInit({
