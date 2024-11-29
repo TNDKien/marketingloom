@@ -1,5 +1,6 @@
 import { getStoryblokApi } from "@storyblok/react";
 import { render } from "storyblok-rich-text-react-renderer";
+import Artikel from "@components/Artikel/Artikel";
 
 export async function getData(slug: string) {
   const storyblokApi = getStoryblokApi();
@@ -21,15 +22,8 @@ export default async function ArticlePage({
   const blok = story.content;
 
   return (
-    <article className="flex flex-col justify-center items-center min-h-screen p-4">
-      <header className="container mx-auto m-8 max-w-[612px] text-center">
-        <h1 className="text-3xl mb-6">{blok.titel}</h1>
-        <p className="mb-12">{blok.teaser}</p>
-      </header>
-      <img src={blok.afbeelding.filename} alt={blok.afbeelding.alt} />
-      <section className="prose max-w-[612px] mt-8">
-        {render(blok.content)}
-      </section>
-    </article>
+    <div>
+      <Artikel blok={blok} />
+    </div>
   );
 }
