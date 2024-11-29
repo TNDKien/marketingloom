@@ -4,7 +4,7 @@ const Header = ({ blok }) => (
   <div className="bg-blue-600 h-28 mt-0" {...storyblokEditable(blok)}>
     {/* <h1 className=" text-4xl font-bold">{blok.Titel}</h1> */}
 
-    <nav className="flex ml-24 mr-24">
+    <nav className="flex ml-24 mr-24 justify-between">
       <div className="w-3/12">
         <a href="/">
           <img
@@ -14,7 +14,7 @@ const Header = ({ blok }) => (
           />
         </a>
       </div>
-      <ul className="flex mt-12 w-6/12 justify-evenly text-wit">
+      <ul className="flex mt-12 w-6/12 justify-between text-wit">
         <li>
           <a href="/Home">Home</a>
         </li>
@@ -32,20 +32,24 @@ const Header = ({ blok }) => (
         </li>
       </ul>
 
-      <div className="w-3/12 flex">
-        <img
-          className="mt-12"
-          src={blok.zoek.filename}
-          alt={blok.zoek.alt || "Zoek"}
-        />
+      <div className="w-3/12">
+        <div className="flex justify-end">
+          <img
+            className="mt-12"
+            src={blok.zoek.filename}
+            alt={blok.zoek.alt || "Zoek"}
+          />
 
-        <button className="text-white bg-rood px-4 py-1 mt-12">Aboneer</button>
+          <button className="text-white bg-rood px-4 py-1 mt-12 ml-6">
+            Aboneer
+          </button>
 
-        <img
-          className="mt-12"
-          src={blok.modus.filename}
-          alt={blok.modus.alt || "Zoek"}
-        />
+          <img
+            className="mt-12 ml-6"
+            src={blok.modus.filename}
+            alt={blok.modus.alt || "Zoek"}
+          />
+        </div>
       </div>
     </nav>
   </div>
