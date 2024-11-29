@@ -1,27 +1,18 @@
 import { render } from "storyblok-rich-text-react-renderer";
+import { storyblokEditable } from "@storyblok/react/rsc";
 
 const Artikel = ({ blok }) => {
   return (
-    <section className="text-gray-600 body-font">
-      <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-        <img
-          className="  md:h-96 w-full mb-10 object-cover object-center rounded"
-          alt={blok.image.alt}
-          src={blok.image.filename}
-        />
-        <div className="text-center lg:w-2/3 w-full">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-            {blok.title}
-          </h1>
-          <h2 className="title-font sm:text-3xl text-2xl mb-4 font-medium text-gray-600">
-            {blok.subtitle}
-          </h2>
-          <div className="mb-8 leading-relaxed text-justify">
-            {render(blok.content)}
-          </div>
-        </div>
-      </div>
-    </section>
+    <article className="flex flex-col justify-center items-center min-h-screen p-4">
+      <header className="container mx-auto m-8 max-w-[612px] text-center">
+        <h1 className="text-h1-desktop mb-6">{blok.titel}</h1>
+        <p className="mb-12">{blok.subtitel}</p>
+      </header>
+      <img src={blok.afbeelding.filename} alt={blok.afbeelding.alt} />
+      <section className="font-paragraaf prose max-w-[612px] mt-8 space-y-8 first-letter:font-standaard first-letter:text-4xl first-letter:font-bold first-letter:text-rood">
+        {render(blok.content)}
+      </section>
+    </article>
   );
 };
 export default Artikel;
