@@ -16,7 +16,7 @@ interface FetchDataResult {
 console.log("dit is de fetch data bestand");
 
 async function fetchData(slug?: string): Promise<FetchDataResult> {
-  console.log(`HEEUUUUH ${slug}`);
+  console.log(`${slug}`);
   const storyblokApi = getStoryblokApi();
   const sbParams: ISbStoriesParams = {
     version: "draft",
