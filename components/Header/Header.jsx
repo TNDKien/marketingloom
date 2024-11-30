@@ -1,4 +1,5 @@
 import { storyblokEditable } from "@storyblok/react/rsc";
+import "./HoverEffect.css";
 
 const Header = ({ blok }) => (
   <div className="bg-blue-200 h-28 mt-0" {...storyblokEditable(blok)}>
@@ -39,10 +40,20 @@ const Header = ({ blok }) => (
           <a href="/Nieuws">Interviews</a>
         </li>
         <li>
-          <a href="/Artikelen">Artikelen</a>
+          <div className="hover-container">
+            <a href="/Artikelen" className="hover-word">
+              Artikelen
+            </a>
+            <div className="hover-line"></div>
+          </div>
         </li>
         <li>
-          <a href="/Evenementen">Evenementen</a>
+          <div className="hover-container">
+            <a href="/Artikelen" className="hover-word">
+              Evenementen
+            </a>
+            <div className="hover-line"></div>
+          </div>
         </li>
       </ul>
 
