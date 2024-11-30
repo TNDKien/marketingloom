@@ -2,7 +2,7 @@ import { storyblokEditable } from "@storyblok/react/rsc";
 import "./HoverEffect.css";
 
 const Header = ({ blok }) => (
-  <div className="bg-blue-200 h-28 mt-0" {...storyblokEditable(blok)}>
+  <div className="-28 mt-0" {...storyblokEditable(blok)}>
     {/* <h1 className=" text-4xl font-bold">{blok.Titel}</h1> */}
 
     <nav className="flex ml-24 mr-24 justify-between">
