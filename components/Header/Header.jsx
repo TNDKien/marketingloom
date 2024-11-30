@@ -17,7 +17,12 @@ const Header = ({ blok }) => (
       </div>
       <ul className="flex mt-12 w-6/12 justify-between text-zwart text-xl">
         <li>
-          <a href="/Home">Home</a>
+          <div className="hover-container">
+            <a href="/Home" className="hover-word">
+              Home
+            </a>
+            <div className="hover-line"></div>
+          </div>
         </li>
         <li className="flex">
           <a className="flex justify-center items-center" href="/Nieuws">
@@ -37,7 +42,12 @@ const Header = ({ blok }) => (
           </a>
         </li>
         <li>
-          <a href="/Nieuws">Interviews</a>
+          <div className="hover-container">
+            <a href="/Nieuws" className="hover-word">
+              Interviews
+            </a>
+            <div className="hover-line"></div>
+          </div>
         </li>
         <li>
           <div className="hover-container">
