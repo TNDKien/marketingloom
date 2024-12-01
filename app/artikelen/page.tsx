@@ -1,26 +1,28 @@
 "use client";
 
 import { getStoryblokApi } from "@storyblok/react";
-import AlleArtikelen from "@components/AlleArtikelen/AlleArtikelen";
+import StoryblokStory from "@storyblok/react/story";
 
-export async function getData() {
+export async function getData(slug: string) {
   const storyblokApi = getStoryblokApi();
-  const response = await storyblokApi.get("cdn/stories/", {
+  const response = await storyblokApi.get(`cdn/stories/${slug}`, {
     version: "draft",
-    starts_with: "artikelen/",
     cv: Date.now(),
   });
 
-  console.log("Storyblok response:", response.data.stories);
-  return response.data.stories;
+  return response.data;
 }
 
 export default async function ArtikelenPage() {
-  const stories = await getData();
+  const data = await getData("artikelen/home");
+
+  if (!data?.story) {
+    return <div>Content not found.</div>;
+  }
 
   return (
     <div>
-      <AlleArtikelen blok={{ articles: stories }} />
+      <StoryblokStory story={data.story} />
     </div>
   );
 }
