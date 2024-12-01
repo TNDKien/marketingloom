@@ -39,14 +39,6 @@ const AlleArtikelen = ({ blok }) => {
     fetchArtikelen();
   }, []);
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
-  if (artikelen.length === 0) {
-    return <p>No articles found.</p>;
-  }
-
   return (
     <section {...storyblokEditable(blok)}>
       <p className="text-3xl font-bold mb-6">{blok.Title}</p>
