@@ -7,11 +7,13 @@ const ArtikelTeaser = ({ article }) => {
     return null;
   }
 
+  console.log(article);
+
   return (
-    <div className="column feature" {...storyblokEditable(article)}>
-      <div className="p-6">
+    <div className="" {...storyblokEditable(article)}>
+      <div className="p-6 w-96">
         <img
-          className="object-cover object-center w-full mb-8 lg:h-48 md:h-36 rounded-xl"
+          className="object-cover object-center w-full mb-8 h-48 rounded-xl"
           src={article.afbeelding?.filename || ""}
           alt={article.afbeelding?.alt || "Image"}
         />
@@ -23,11 +25,11 @@ const ArtikelTeaser = ({ article }) => {
         </div>
         <div className="mt-4">
           <Link
-            href={`/artikelen/${article.slug}`}
-            className="inline-flex items-center mt-4 font-semibold text-blue-600 lg:mb-0 hover:text-neutral-600"
+            href={`/${article.slug}`}
+            className="inline-flex items-center mt-4 font-semibold text-rood lg:mb-0 hover:text-neutral-600"
             title="read more"
           >
-            Read More »
+            Lees meer »
           </Link>
         </div>
       </div>

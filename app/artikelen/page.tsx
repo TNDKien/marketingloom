@@ -1,16 +1,6 @@
 "use client";
 
 import { getStoryblokApi } from "@storyblok/react";
-import {
-  Key,
-  ReactElement,
-  JSXElementConstructor,
-  ReactNode,
-  ReactPortal,
-  PromiseLikeOfReactNode,
-  use,
-} from "react";
-import { render } from "storyblok-rich-text-react-renderer";
 import AlleArtikelen from "@components/AlleArtikelen/AlleArtikelen";
 
 export async function getData() {
@@ -30,7 +20,7 @@ export default async function ArtikelenPage() {
 
   return (
     <div>
-      <AlleArtikelen blok={{}} />
+      <AlleArtikelen blok={{ articles: stories }} />
     </div>
   );
 }

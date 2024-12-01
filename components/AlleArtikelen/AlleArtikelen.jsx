@@ -16,9 +16,16 @@ const AlleArtikelen = ({ blok }) => {
           is_startpage: false,
         });
 
-        const formattedArtikelen = data.stories.map((article) => ({
-          content: article.content,
-          slug: article.slug,
+        // Filter out the article with the name 'Home'
+        const filteredArticles = data.stories.filter(
+          (article) => article.name !== "Home"
+        );
+
+        const formattedArtikelen = filteredArticles.map((article) => ({
+          titel: article.content.titel || article.name, // Default to name if no title
+          subtitel: article.content.subtitel || "",
+          afbeelding: article.content.afbeelding || null,
+          slug: article.full_slug, // Use the full_slug for correct linking
         }));
 
         setArtikelen(formattedArtikelen);
@@ -43,9 +50,9 @@ const AlleArtikelen = ({ blok }) => {
   return (
     <section {...storyblokEditable(blok)}>
       <p className="text-3xl font-bold mb-6">{blok.Title}</p>
-      <div className="grid w-full grid-cols-1 gap-6 mx-auto lg:grid-cols-4 lg:px-24 md:px-16">
+      <div className="flex overflow-x-auto">
         {artikelen.map((article) => (
-          <ArtikelTeaser article={article.content} key={article.slug} />
+          <ArtikelTeaser article={article} key={article.slug} />
         ))}
       </div>
     </section>
