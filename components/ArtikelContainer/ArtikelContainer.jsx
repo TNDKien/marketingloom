@@ -22,7 +22,7 @@ const AlleArtikelen = ({ blok }) => {
         );
 
         const formattedArtikelen = filteredArticles.map((article) => ({
-          titel: article.content.titel || article.name, // Default to name if no title
+          titel: article.content.titel || article.name,
           subtitel: article.content.subtitel || "",
           afbeelding: article.content.afbeelding || null,
           slug: article.full_slug, // Use the full_slug for correct linking
@@ -40,8 +40,8 @@ const AlleArtikelen = ({ blok }) => {
   }, []);
 
   return (
-    <section {...storyblokEditable(blok)}>
-      <p className="text-3xl font-bold mb-6">{blok.Title}</p>
+    <section className="p-6 lg:px-24" {...storyblokEditable(blok)}>
+      <p className="text-3xl font-bold mb-6">{blok.titel}</p>
       <div className="flex overflow-x-auto">
         {artikelen.map((article) => (
           <ArtikelTeaser article={article} key={article.slug} />
