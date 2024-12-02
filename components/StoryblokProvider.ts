@@ -18,7 +18,6 @@ import Evenement from "./Evenement/Evenement";
 import Event_Container from "./Event_Container/Event_Container";
 import Event_Hero from "./Event_Hero/Event_Hero";
 import Event_Info from "./Event_Info/Event_Info";
-import Eyecatcher from "./Eyecatcher/Eyecatcher";
 import Interview_Container from "./Interview_Container/Interview_Container";
 import Nieuwsbrief from "./Nieuwsbrief/Nieuwsbrief";
 import Pagina_Hero from "./Pagina_Hero/Pagina_Hero";
@@ -54,7 +53,6 @@ const components = {
   sticky_component: Sticky_Component,
   tickets: Tickets,
   verkoop: Verkoop,
-  eyecatcher: Eyecatcher,
 };
 
 storyblokInit({
