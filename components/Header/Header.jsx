@@ -94,6 +94,7 @@ const Header = ({ blok }) => (
     {/* Uitklapmenu */}
     <div className="h-72 bg-zwart">
       <div className="ml-24 mr-24 flex flex-row justify-between">
+        {/* Innovaties list */}
         <ul className="">
           <li className="mt-12 py-2">
             <a className="text-rood">Innovaties</a>
@@ -111,10 +112,73 @@ const Header = ({ blok }) => (
             <a className="text-wit">Mobiele Innovaties</a>
           </li>
         </ul>
-        <div className="bg-rood">5 elementen</div>
-        <div className="bg-rood">5 elementen</div>
-        <div className="bg-rood">5 elementen</div>
-        <div className="bg-rood">5 elementen</div>
+
+        {/* Social Media */}
+        <ul className="">
+          <li className="mt-12 py-2">
+            <a className="text-rood">Social Media</a>
+          </li>
+          <li className="py-2">
+            <a className="text-wit">Content Creatie</a>
+          </li>
+          <li className="py-2">
+            <a className="text-wit">Platform Updates</a>
+          </li>
+          <li className="py-2">
+            <a className="text-wit">Influencer Marketing</a>
+          </li>
+          <li className="py-2">
+            <a className="text-wit">Social Advertising</a>
+          </li>
+        </ul>
+
+        {/* Content & strategie*/}
+        <ul className="">
+          <li className="mt-12 py-2">
+            <a className="text-rood">SEO</a>
+          </li>
+          <li className="py-2">
+            <a className="text-wit">Content Marketing</a>
+          </li>
+          <li className="py-2">
+            <a className="text-wit">Storytelling</a>
+          </li>
+          <li className="py-2">
+            <a className="text-wit">Copywriting</a>
+          </li>
+        </ul>
+
+        {/* Data & Analytics */}
+        <ul className="">
+          <li className="mt-12 py-2">
+            <a className="text-rood">Big Data</a>
+          </li>
+          <li className="py-2">
+            <a className="text-wit">Web Analystics</a>
+          </li>
+          <li className="py-2">
+            <a className="text-wit">Performance Metrics</a>
+          </li>
+          <li className="py-2">
+            <a className="text-wit">Klantinzichten</a>
+          </li>
+        </ul>
+
+        {/* Campagnes & Reclame */}
+        <ul className="">
+          <li className="mt-12 py-2">
+            <a className="text-rood">Creative Concepten</a>
+          </li>
+          <li className="py-2">
+            <a className="text-wit">Succesverhalen</a>
+          </li>
+          <li className="py-2">
+            <a className="text-wit">Video & TV</a>
+          </li>
+          <li className="py-2">
+            <a className="text-wit">Buitenreclame</a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
