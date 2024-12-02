@@ -20,7 +20,7 @@ const Sidebar = ({ blok }) => {
         <div className="absolute bottom-0 left-0 w-full h-[2px] bg-white sm:bg-black">
           {/* Rode overlay voor de actieve tab */}
           <div
-            className="absolute h-full bg-red-400 transition-all duration-300 ease-in-out"
+            className="absolute h-full bg-red transition-all duration-300 ease-in-out"
             style={{
               width: "50%",
               left: activeTab === "Net binnen" ? "0%" : "50%",
@@ -29,28 +29,28 @@ const Sidebar = ({ blok }) => {
         </div>
 
         {/* Tab 1: Net binnen */}
-        <button
-          className={`relative flex-1 text-center font-bold px-3 py-3 ${
-            activeTab === "Net binnen"
-              ? "text-white sm:text-black"
-              : "text-gray-300 hover:text-white sm:hover:text-black"
-          }`}
-          onClick={() => setActiveTab("Net binnen")}
-        >
-          Net binnen
-        </button>
+<button
+  className={`relative flex-1 text-center font-bold px-3 py-3 ${
+    activeTab === "Net binnen"
+      ? "text-white sm:text-black text-label-mobile sm:text-label-desktop"
+      : "text-silver hover:text-white sm:hover:text-black text-label-mobile sm:text-label-desktop"
+  }`}
+  onClick={() => setActiveTab("Net binnen")}
+>
+  Net binnen
+</button>
 
-        {/* Tab 2: Meest gelezen */}
-        <button
-          className={`relative flex-1 text-center font-bold px-3 py-3 ${
-            activeTab === "Meest gelezen"
-              ? "text-white sm:text-black"
-              : "text-gray-300 hover:text-white sm:hover:text-black"
-          }`}
-          onClick={() => setActiveTab("Meest gelezen")}
-        >
-          Meest gelezen
-        </button>
+{/* Tab 2: Meest gelezen */}
+<button
+  className={`relative flex-1 text-center font-bold px-3 py-3 ${
+    activeTab === "Meest gelezen"
+      ? "text-white sm:text-black text-label-mobile sm:text-label-desktop"
+      : "text-silver hover:text-white sm:hover:text-black text-label-mobile sm:text-label-desktop"
+  }`}
+  onClick={() => setActiveTab("Meest gelezen")}
+>
+  Meest gelezen
+</button>
       </div>
 
       {/* Content */}
@@ -65,7 +65,7 @@ const Sidebar = ({ blok }) => {
             {...storyblokEditable(artikel)}
           >
             {/* Verticale lijn altijd 2px breed */}
-            <div className="block sm:hidden w-[2px] bg-red-500 h-full"></div>
+            <div className="block sm:hidden w-[2px] bg-red h-full"></div>
 
             {/* Afbeelding met hover-effect */}
             <img
@@ -75,10 +75,10 @@ const Sidebar = ({ blok }) => {
             />
 
             <div className="pl-4">
-              <h3 className="font-standaard text-sm sm:text-base lg:text-sm font-bold text-white sm:text-black group-hover:underline">
+              <h3 className="font-sans label-mobile sm:text-label-desktop font-bold text-white sm:text-black group-hover:underline">
                 {artikel.sidebar_title}
               </h3>
-              <p className="font-standaard text-xs sm:text-sm lg:text-xs font-normal text-white sm:text-black group-hover:underline">
+              <p className="font-sans text-label-mobile sm:text-label-desktop text-silver sm:text-black group-hover:underline">
                 {artikel.sidebar_paragraph}
               </p>
             </div>
@@ -88,7 +88,7 @@ const Sidebar = ({ blok }) => {
 
       {/* Lees Meer Knop */}
       <div className="w-full h-[44px] px-4 flex items-center bg-black sm:bg-white">
-        <button className="group relative flex items-center text-sm lg:text-base font-bold text-white sm:text-black">
+        <button className="group relative flex items-center text-label-mobile sm:text-label-desktop font-bold text-white sm:text-black">
           <span className="relative z-10">Lees Meer</span>
           <span className="ml-2 transition-transform duration-300 ease-out group-hover:-translate-x-2 opacity-100 group-hover:opacity-0">
             →
