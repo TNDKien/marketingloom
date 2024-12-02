@@ -42,3 +42,5 @@ const Eyecatcher = ({ blok }) => (
 );
 
 export default Eyecatcher;
+
+//m.snoeren@student.fontys.nl
