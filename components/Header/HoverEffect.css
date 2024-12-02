@@ -15,9 +15,6 @@
     transition: color 0.3s ease;
 } */
 
-.hover-container:hover .hover-word {
-    color: red;
-}
 
 .hover-line {
     position: absolute;

@@ -25,7 +25,7 @@ const Header = ({ blok }) => {
         <ul className="flex mt-12 w-6/12 justify-between text-zwart text-xl">
           <li>
             <div className="hover-container">
-              <a href="/Home" className="hover-word">
+              <a href="/Home" className="hover:text-rood">
                 Home
               </a>
               <div className="hover-line"></div>
@@ -33,7 +33,7 @@ const Header = ({ blok }) => {
           </li>
           <li className="flex">
             <button
-              className="flex justify-center items-center"
+              className="hover:text-rood flex justify-center items-center "
               onClick={toggleMenu} // Toggle het menu bij klikken
             >
               Nieuws
@@ -54,7 +54,7 @@ const Header = ({ blok }) => {
           </li>
           <li>
             <div className="hover-container">
-              <a href="/Interviews" className="hover-word">
+              <a href="/Interviews" className="hover:text-rood">
                 Interviews
               </a>
               <div className="hover-line"></div>
@@ -62,7 +62,7 @@ const Header = ({ blok }) => {
           </li>
           <li>
             <div className="hover-container">
-              <a href="/Artikelen" className="hover-word">
+              <a href="/Artikelen" className="hover:text-rood">
                 Artikelen
               </a>
               <div className="hover-line"></div>
@@ -70,7 +70,7 @@ const Header = ({ blok }) => {
           </li>
           <li>
             <div className="hover-container">
-              <a href="/Artikelen" className="hover-word">
+              <a href="/Artikelen" className="hover:text-rood">
                 Evenementen
               </a>
               <div className="hover-line"></div>
