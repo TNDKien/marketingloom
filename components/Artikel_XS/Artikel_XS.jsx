@@ -1,13 +1,32 @@
-import { storyblokEditable } from "@storyblok/react/rsc";
+import { storyblokEditable } from "@storyblok/react";
 
 const Artikel_XS = ({ blok }) => (
-  <div className=" bg-blue-500 text-white" {...storyblokEditable(blok)}>
-    <h1 className=" text-4xl font-bold">{blok.Titel}</h1>
+  <div
+    className="bg-white text-black p-4 mb-4 max-w-[360px] min-h-[110px] flex flex-row"
+    {...storyblokEditable(blok)}
+  >
+    {/* Afbeelding */}
     <img
-      className="w-1/2"
-      src={blok.Afbeelding.filename}
-      alt={blok.Afbeelding.alt}
+      className="h-[110px] w-[110px] object-cover"
+      src={blok["artikel_xs_image"]?.filename}
+      alt={blok["artikel_xs_image"]?.alt || "Afbeelding"}
     />
+
+    {/* Tekstcontainer */}
+    <div className="ml-4 flex flex-col justify-between flex-grow">
+      {/* Titel */}
+      <h1 className="text-xl text-black font-bold mb-1 truncate">
+        {blok["artikel_xs_title"]}
+      </h1>
+      {/* Paragraaf */}
+      <p className="text-sm text-black truncate">
+        {blok["artikel_xs_paragraph"]}
+      </p>
+      {/* Label */}
+      <span className="text-xs text-black font-medium bg-white px-2">
+        {blok["artikel_xs_label"]}
+      </span>
+    </div>
   </div>
 );
 
