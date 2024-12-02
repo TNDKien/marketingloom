@@ -19,7 +19,7 @@
 .hover-line {
     position: absolute;
     height: 1px;
-    background-color: red;
+    background-color: #E94560;
     bottom: 0;
     left: -100%;
     /* Start buiten het frame aan de linkerkant */

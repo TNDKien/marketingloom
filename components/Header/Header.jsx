@@ -108,87 +108,102 @@ const Header = ({ blok }) => {
           <div className="ml-24 mr-24 flex flex-row justify-between">
             {/* Innovaties list */}
             <ul className="">
-              <li className="mt-12 py-2">
-                <a className="text-rood">Innovaties</a>
+              <div className="hover-container">
+                <li className="mt-12 py-2">
+                  <a className="text-rood">Innovaties</a>
+                  <div className="hover-line"></div>
+                </li>
+              </div>
+              <li className="py-2">
+                <a className="text-wit hover:text-rood">AI</a>
               </li>
               <li className="py-2">
-                <a className="text-wit">AI</a>
+                <a className="text-wit hover:text-rood">AR & VR</a>
               </li>
               <li className="py-2">
-                <a className="text-wit">AR & VR</a>
+                <a className="text-wit hover:text-rood">Tech Doorbraken</a>
               </li>
               <li className="py-2">
-                <a className="text-wit">Tech Doorbraken</a>
-              </li>
-              <li className="py-2">
-                <a className="text-wit">Mobiele Innovaties</a>
+                <a className="text-wit hover:text-rood">Mobiele Innovaties</a>
               </li>
             </ul>
 
             {/* Social Media */}
             <ul className="">
-              <li className="mt-12 py-2">
-                <a className="text-rood">Social Media</a>
+              <div className="hover-container">
+                <li className="mt-12 py-2">
+                  <a className="text-rood">Social Media</a>
+                  <div className="hover-line"></div>
+                </li>
+              </div>
+              <li className="py-2">
+                <a className="text-wit hover:text-rood">Content Creatie</a>
               </li>
               <li className="py-2">
-                <a className="text-wit">Content Creatie</a>
+                <a className="text-wit hover:text-rood">Platform Updates</a>
               </li>
               <li className="py-2">
-                <a className="text-wit">Platform Updates</a>
+                <a className="text-wit hover:text-rood">Influencer Marketing</a>
               </li>
               <li className="py-2">
-                <a className="text-wit">Influencer Marketing</a>
-              </li>
-              <li className="py-2">
-                <a className="text-wit">Social Advertising</a>
+                <a className="text-wit hover:text-rood">Social Advertising</a>
               </li>
             </ul>
 
             {/* Content & strategie*/}
             <ul className="">
-              <li className="mt-12 py-2">
-                <a className="text-rood">SEO</a>
+              <div className="hover-container">
+                <li className="mt-12 py-2">
+                  <a className="text-rood">SEO</a>
+                  <div className="hover-line"></div>
+                </li>
+              </div>
+              <li className="py-2">
+                <a className="text-wit hover:text-rood">Content Marketing</a>
               </li>
               <li className="py-2">
-                <a className="text-wit">Content Marketing</a>
+                <a className="text-wit hover:text-rood">Storytelling</a>
               </li>
               <li className="py-2">
-                <a className="text-wit">Storytelling</a>
-              </li>
-              <li className="py-2">
-                <a className="text-wit">Copywriting</a>
+                <a className="text-wit hover:text-rood">Copywriting</a>
               </li>
             </ul>
 
             {/* Data & Analytics */}
             <ul className="">
-              <li className="mt-12 py-2">
-                <a className="text-rood">Big Data</a>
+              <div className="hover-container">
+                <li className="mt-12 py-2">
+                  <a className="text-rood">Big data</a>
+                  <div className="hover-line"></div>
+                </li>
+              </div>
+              <li className="py-2">
+                <a className="text-wit hover:text-rood">Web Analystics</a>
               </li>
               <li className="py-2">
-                <a className="text-wit">Web Analystics</a>
+                <a className="text-wit hover:text-rood">Performance Metrics</a>
               </li>
               <li className="py-2">
-                <a className="text-wit">Performance Metrics</a>
-              </li>
-              <li className="py-2">
-                <a className="text-wit">Klantinzichten</a>
+                <a className="text-wit hover:text-rood">Klantinzichten</a>
               </li>
             </ul>
 
             {/* Campagnes & Reclame */}
             <ul className="">
-              <li className="mt-12 py-2">
-                <a className="text-rood">Creative Concepten</a>
+              <div className="hover-container">
+                <li className="mt-12 py-2">
+                  <a className="text-rood">Creative Concepten</a>
+                  <div className="hover-line"></div>
+                </li>
+              </div>
+              <li className="py-2">
+                <a className="text-wit hover:text-rood">Succesverhalen</a>
               </li>
               <li className="py-2">
-                <a className="text-wit">Succesverhalen</a>
+                <a className="text-wit hover:text-rood">Video & TV</a>
               </li>
               <li className="py-2">
-                <a className="text-wit">Video & TV</a>
-              </li>
-              <li className="py-2">
-                <a className="text-wit">Buitenreclame</a>
+                <a className="text-wit hover:text-rood">Buitenreclame</a>
               </li>
             </ul>
           </div>
