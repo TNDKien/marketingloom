@@ -11,7 +11,6 @@ import Artikel from "./Artikel/Artikel";
 import Account from "./Account/Account";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
-import Artikel_Container from "./Artikel_Container/Artikel_Container";
 import Artikel_Hero from "./Artikel_Hero/Artikel_Hero";
 import Artikel_XS from "./Artikel_XS/Artikel_XS";
 import Contact from "./Contact/Contact";
@@ -28,9 +27,7 @@ import Spreker_Hero from "./Spreker_Hero/Spreker_Hero";
 import Sticky_Component from "./Sticky_Component/Sticky_Component";
 import Tickets from "./Tickets/Tickets";
 import Verkoop from "./Verkoop/Verkoop";
-import ArtikelContainer from "./ArtikelContainer/ArtikelContainer";
-import Populaire_Artikelen from "./Populaire_Artikelen/Populaire_Artikelen";
-import ArtikelTeaser from "./ArtikelTeaser/ArtikelTeaser";
+import Eyecatcher from "./Eyecatcher/Eyecatcher";
 
 const components = {
   page: Page,
@@ -39,7 +36,6 @@ const components = {
   account: Account,
   footer: Footer,
   header: Header,
-  artikel_container: Artikel_Container,
   artikel_hero: Artikel_Hero,
   artikel_xs: Artikel_XS,
   contact: Contact,
@@ -56,9 +52,7 @@ const components = {
   sticky_component: Sticky_Component,
   tickets: Tickets,
   verkoop: Verkoop,
-  artikelcontainer: ArtikelContainer,
-  populaire_artikelen: Populaire_Artikelen,
-  artikelteaser: ArtikelTeaser,
+  eyecatcher: Eyecatcher,
 };
 
 storyblokInit({
