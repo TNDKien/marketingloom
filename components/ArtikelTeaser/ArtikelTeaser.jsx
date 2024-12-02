@@ -11,16 +11,16 @@ const ArtikelTeaser = ({ article }) => {
 
   return (
     <div className="" {...storyblokEditable(article)}>
-      <div className="p-6 w-96">
+      <div className="mr-6 w-72">
         <img
-          className="object-cover object-center w-full mb-8 h-48 rounded-xl"
+          className="object-cover object-center w-full mb-8 h-48"
           src={article.afbeelding?.filename || ""}
           alt={article.afbeelding?.alt || "Image"}
         />
-        <h2 className="mx-auto mb-8 text-xl font-semibold leading-none tracking-tighter text-neutral-600">
+        <h2 className="h-12 mx-auto mb-8 text-xl font-semibold leading-none tracking-tighter text-neutral-600">
           {article.titel || "Untitled"}
         </h2>
-        <div className="mx-auto text-base leading-relaxed text-gray-500 line-clamp-2">
+        <div className="mx-auto text-base leading-relaxed text-gray-500 line-clamp-3">
           {article.subtitel || "No teaser available"}
         </div>
         <div className="mt-4">

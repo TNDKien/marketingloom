@@ -25,7 +25,7 @@ const AlleArtikelen = ({ blok }) => {
           titel: article.content.titel || article.name,
           subtitel: article.content.subtitel || "",
           afbeelding: article.content.afbeelding || null,
-          slug: article.full_slug, // Use the full_slug for correct linking
+          slug: article.full_slug,
         }));
 
         setArtikelen(formattedArtikelen);
