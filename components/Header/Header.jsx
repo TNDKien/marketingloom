@@ -94,20 +94,20 @@ const Header = ({ blok }) => (
     {/* Uitklapmenu */}
     <div className="h-72 bg-zwart">
       <div className="ml-24 mr-24 flex flex-row justify-between">
-        <ul>
-          <li className="mt-12 ">
+        <ul className="">
+          <li className="mt-12 py-2">
             <a className="text-rood">Innovaties</a>
           </li>
-          <li className="">
+          <li className="py-2">
             <a className="text-wit">AI</a>
           </li>
-          <li className="">
+          <li className="py-2">
             <a className="text-wit">AR & VR</a>
           </li>
-          <li className="">
+          <li className="py-2">
             <a className="text-wit">Tech Doorbraken</a>
           </li>
-          <li className="">
+          <li className="py-2">
             <a className="text-wit">Mobiele Innovaties</a>
           </li>
         </ul>
