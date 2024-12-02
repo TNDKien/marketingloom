@@ -42,3 +42,5 @@ const Eyecatcher = ({ blok }) => (
 );
 
 export default Eyecatcher;
+
+//mobile
