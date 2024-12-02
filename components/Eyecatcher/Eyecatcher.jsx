@@ -2,7 +2,7 @@ import { storyblokEditable } from "@storyblok/react/rsc";
 
 const Eyecatcher = ({ blok }) => (
   <div
-    className="p-6 max-w-xl mx-auto font-standaard"
+    className="p-6 max-w-xl mx-auto font-sans text-black"
     {...storyblokEditable(blok)}
   >
     {/* Afbeelding */}
@@ -13,28 +13,28 @@ const Eyecatcher = ({ blok }) => (
     />
 
     {/* Titel */}
-    <h1 className="mt-4 text-2xl font-bold text-zwart">
+    <h1 className="mt-4 text-h1-mobile font-semibold text-black sm:text-h2-desktop">
       {blok.titel.split(" Merkzichtbaarheid")[0]}{" "}
-      <span className="bg-rood text-white px-2 py-1 rounded-md">
+      <span className="bg-red text-white px-2 py-1 rounded-md">
         Merkzichtbaarheid
       </span>
       {blok.titel.split(" Merkzichtbaarheid")[1]}
     </h1>
 
     {/* Body */}
-    <p className="mt-4 pr-8 text-zwart font-paragraaf leading-relaxed line-clamp-5 sm:line-clamp-none">
+    <p className="mt-4 pr-8 text-paragraph font-serif leading-relaxed line-clamp-5 sm:line-clamp-none">
       {blok.body}
     </p>
 
     {/* Auteur, tijd en Call-to-action */}
-    <div className="mt-4 flex items-center justify-between text-sm text-zwart hidden sm:flex">
+    <div className="mt-4 flex items-center justify-between text-sm hidden sm:flex">
       {/* Auteur en tijd */}
       <p>
-        <span className="font-semibold">{blok.auteur}</span> • {blok.tijd}
+        <span className="text-label-desktop font-semibold">{blok.auteur}</span> • {blok.tijd}
       </p>
 
       {/* Call-to-action */}
-      <a href="#" className="text-zwart font-medium hover:underline">
+      <a href="#" className="text-label-desktop font-medium hover:underline">
         {blok.cta} →
       </a>
     </div>

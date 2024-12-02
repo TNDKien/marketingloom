@@ -11,7 +11,6 @@ import Artikel from "./Artikel/Artikel";
 import Account from "./Account/Account";
 import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
-import Artikel_Container from "./Artikel_Container/Artikel_Container";
 import Artikel_Hero from "./Artikel_Hero/Artikel_Hero";
 import Artikel_XS from "./Artikel_XS/Artikel_XS";
 import Contact from "./Contact/Contact";
@@ -37,7 +36,6 @@ const components = {
   account: Account,
   footer: Footer,
   header: Header,
-  artikel_container: Artikel_Container,
   artikel_hero: Artikel_Hero,
   artikel_xs: Artikel_XS,
   contact: Contact,
