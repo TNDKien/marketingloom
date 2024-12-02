@@ -5,7 +5,7 @@ const Header = ({ blok }) => (
   <div className="-28 mt-0" {...storyblokEditable(blok)}>
     {/* <h1 className=" text-4xl font-bold">{blok.Titel}</h1> */}
 
-    <nav className="flex ml-24 mr-24 justify-between">
+    <nav className="flex ml-24 mr-24 justify-between pb-8">
       <div className="w-3/12">
         <a href="/">
           <img
@@ -25,7 +25,7 @@ const Header = ({ blok }) => (
           </div>
         </li>
         <li className="flex">
-          <a className="flex justify-center items-center" href="/Nieuws">
+          <a className="flex justify-center items-center" href="">
             Nieuws
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ const Header = ({ blok }) => (
         </li>
         <li>
           <div className="hover-container">
-            <a href="/Nieuws" className="hover-word">
+            <a href="/Interviews" className="hover-word">
               Interviews
             </a>
             <div className="hover-line"></div>
@@ -87,6 +87,8 @@ const Header = ({ blok }) => (
         </div>
       </div>
     </nav>
+
+    <div className="h-72 bg-zwart">.</div>
   </div>
 );
 
