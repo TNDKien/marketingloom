@@ -19,6 +19,7 @@ import Evenement from "./Evenement/Evenement";
 import Event_Container from "./Event_Container/Event_Container";
 import Event_Hero from "./Event_Hero/Event_Hero";
 import Event_Info from "./Event_Info/Event_Info";
+import Eyecatcher from "./Eyecatcher/Eyecatcher";
 import Interview_Container from "./Interview_Container/Interview_Container";
 import Nieuwsbrief from "./Nieuwsbrief/Nieuwsbrief";
 import Pagina_Hero from "./Pagina_Hero/Pagina_Hero";
@@ -47,6 +48,7 @@ const components = {
   event_container: Event_Container,
   event_hero: Event_Hero,
   event_info: Event_Info,
+  eyecatcher: Eyecatcher,
   interview_container: Interview_Container,
   nieuwsbrief: Nieuwsbrief,
   pagina_hero: Pagina_Hero,
