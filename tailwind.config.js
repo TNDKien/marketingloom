@@ -10,27 +10,33 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        zwart: "#161616",
-        wit: "#F5F3F5",
-        rood: "#E94560",
-        zilver: "#AFAFAF",
+        black: "#161616",
+        white: "#F5F3F5",
+        red: "#E94560",
+        silver: "#AFAFAF",
       },
       fontFamily: {
-        paragraaf: ["IBM Plex Serif", "serif"],
-        standaard: ["Montserrat", "sans-serif"],
+        serif: ["IBM Plex Serif", "serif"],
+        sans: ["Montserrat", "sans-serif"],
       },
       fontSize: {
-        "h1-desktop": ["32px", { lineHeight: "auto", fontWeight: "700" }], // Page Title (Desktop)
-        "h2-desktop": ["24px", { lineHeight: "32px", fontWeight: "600" }], // Headline (Desktop)
-        "p-desktop": ["20px", { lineHeight: "24px", fontWeight: "400" }], // Page Description / Paragraph (Desktop)
-        "h3-desktop": ["20px", { lineHeight: "auto", fontWeight: "500" }], // Small Headline (Desktop)
-        "label-desktop": ["14px", { lineHeight: "16px", fontWeight: "400" }], // Label (Desktop)
-        "alt-desktop": ["12px", { lineHeight: "auto", fontWeight: "400" }], // Alternative (Desktop)
-        "h1-mobile": ["24px", { lineHeight: "28px", fontWeight: "700" }], // Page Title (Mobile)
-        "h2-mobile": ["20px", { lineHeight: "24px", fontWeight: "600" }], // Headline (Mobile)
-        "p-mobile": ["16px", { lineHeight: "24px", fontWeight: "400" }], // Paragraph / Small Headline (Mobile)
-        "label-mobile": ["14px", { lineHeight: "16px", fontWeight: "400" }], // Author / Info (Mobile)
-        "alt-mobile": ["12px", { lineHeight: "auto", fontWeight: "400" }], // Label/Alternative (Mobile)
+        // Unique Desktop Typography
+        "h1-desktop": ["32px", "auto"], // Page title
+        "h2-desktop": ["24px", "32px"], // Headline
+        "p-large-desktop": ["20px", "24px"], // Page description
+        "h3-desktop": ["20px", "auto"], // Small headline
+        "label-desktop": ["14px", "16px"], // Label
+        "alt-desktop": ["12px", "auto"], // Alternative
+
+        // Shared sizes for Desktop and Mobile
+        paragraph: ["16px", "24px"], // Paragraph & Author/Information (Desktop) + Paragraph (Mobile)
+
+        // Unique Mobile Typography
+        "h1-mobile": ["24px", "28px"], // Page title
+        "h3-mobile": ["20px", "24px"], // Headline
+        "p-large-mobile": ["20px", "24px"], // Page description
+        "info-mobile": ["14px", "16px"], // Author/Info
+        "label-mobile": ["12px", "auto"], // Label/Alternative
       },
       animation: {},
       keyframes: {},
