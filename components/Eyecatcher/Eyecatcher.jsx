@@ -43,4 +43,4 @@ const Eyecatcher = ({ blok }) => (
 
 export default Eyecatcher;
 
-//mobile
+// is dit het goede account?
