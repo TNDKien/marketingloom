@@ -42,5 +42,3 @@ const Eyecatcher = ({ blok }) => (
 );
 
 export default Eyecatcher;
-
-// is dit het goede account?
