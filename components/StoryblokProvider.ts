@@ -29,7 +29,7 @@ import Sticky_Component from "./Sticky_Component/Sticky_Component";
 import Tickets from "./Tickets/Tickets";
 import Verkoop from "./Verkoop/Verkoop";
 import ArtikelContainer from "./ArtikelContainer/ArtikelContainer";
-import Populaire_Artikelen from "./Populaire_Artikelen/Populaire_Artikelen";
+import PopulaireArtikelen from "./PopulaireArtikelen/PopulaireArtikelen";
 import ArtikelTeaser from "./ArtikelTeaser/ArtikelTeaser";
 
 const components = {
@@ -57,7 +57,7 @@ const components = {
   tickets: Tickets,
   verkoop: Verkoop,
   artikelcontainer: ArtikelContainer,
-  populaire_artikelen: Populaire_Artikelen,
+  populaireartikelen: PopulaireArtikelen,
   artikelteaser: ArtikelTeaser,
 };
 
