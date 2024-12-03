@@ -3,7 +3,7 @@ import Evenement from "@components/Evenement/Evenement";
 
 export async function getData(slug: string) {
   const storyblokApi = getStoryblokApi();
-  const response = await storyblokApi.get(`cdn/stories/artikelen/${slug}`, {
+  const response = await storyblokApi.get(`cdn/stories/evenementen/${slug}`, {
     version: "draft",
     cv: Date.now(),
   });

@@ -13,8 +13,8 @@ export async function getData(slug: string) {
   return response.data;
 }
 
-export default async function ArtikelenPage() {
-  const data = await getData("artikelen/home");
+export default async function EvenementenPage() {
+  const data = await getData("evenementen/home");
 
   if (!data?.story) {
     return <div>Content not found.</div>;

@@ -15,7 +15,7 @@ import Artikel_Hero from "./Artikel_Hero/Artikel_Hero";
 import Artikel_XS from "./Artikel_XS/Artikel_XS";
 import Contact from "./Contact/Contact";
 import Evenement from "./Evenement/Evenement";
-import Event_Container from "./Event_Container/Event_Container";
+import EvenementContainer from "./EvenementContainer/EvenementContainer";
 import Event_Hero from "./Event_Hero/Event_Hero";
 import Event_Info from "./Event_Info/Event_Info";
 import Interview_Container from "./Interview_Container/Interview_Container";
@@ -43,7 +43,7 @@ const components = {
   artikel_xs: Artikel_XS,
   contact: Contact,
   evenement: Evenement,
-  event_container: Event_Container,
+  evenementcontainer: EvenementContainer,
   event_hero: Event_Hero,
   event_info: Event_Info,
   eyecatcher: Eyecatcher,
