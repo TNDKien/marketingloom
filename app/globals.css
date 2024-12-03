@@ -9,6 +9,7 @@
 }
 
 body {
+  width: 100%;
   background-color: #f5f3f5;
   color: #161616;
   margin: 0;
@@ -21,8 +22,9 @@ h3 {
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 p {
-  padding-bottom: 12px;
+  /* padding-bottom: 12px; */
 }

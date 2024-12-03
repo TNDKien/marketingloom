@@ -30,9 +30,7 @@ const AlleArtikelen = ({ blok }) => {
 
         setArtikelen(formattedArtikelen);
       } catch (error) {
-        console.error("Error fetching artikelen:", error);
-      } finally {
-        setLoading(false);
+        console.error("Failed to fetch articles", error);
       }
     };
 

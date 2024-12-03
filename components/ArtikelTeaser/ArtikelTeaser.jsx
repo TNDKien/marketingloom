@@ -17,7 +17,7 @@ const ArtikelTeaser = ({ article }) => {
           src={article.afbeelding?.filename || ""}
           alt={article.afbeelding?.alt || "Image"}
         />
-        <h2 className="h-12 mx-auto mb-8 text-xl font-semibold leading-none tracking-tighter text-neutral-600">
+        <h2 className="h-12 mx-auto mb-8 text-xl font-semibold leading-none tracking-tighter text-black">
           {article.titel || "Untitled"}
         </h2>
         <div className="mx-auto text-base leading-relaxed text-gray-500 line-clamp-3">
@@ -26,7 +26,7 @@ const ArtikelTeaser = ({ article }) => {
         <div className="mt-4">
           <Link
             href={`/${article.slug}`}
-            className="inline-flex items-center mt-4 font-semibold text-rood lg:mb-0 hover:text-neutral-600"
+            className="inline-flex items-center mt-4 font-semibold text-red lg:mb-0 hover:text-neutral-600"
             title="read more"
           >
             Lees meer »
