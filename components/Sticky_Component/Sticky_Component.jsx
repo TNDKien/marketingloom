@@ -5,32 +5,30 @@ import { faTwitter, faWhatsapp, faFacebookF, faLinkedinIn, faInstagram } from "@
 
 const Sticky_Component = ({ blok }) => {
   const [scrollPercent, setScrollPercent] = useState(0);
-  const [startScroll, setStartScroll] = useState(null); // Scrollpositie waarop sticky element de top bereikt
+  const [startScroll, setStartScroll] = useState(null);
   const stickyRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
       if (!stickyRef.current) return;
 
-      const stickyTop = stickyRef.current.getBoundingClientRect().top; // Afstand tot de top van het venster
-      const scrollTop = window.scrollY; // Hoe ver de gebruiker gescrold is
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight; // Totale hoogte van de pagina
+      const stickyTop = stickyRef.current.getBoundingClientRect().top;
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
 
       if (stickyTop <= 0) {
-        // Stel startScroll in als dit nog niet gedaan is
         if (startScroll === null) {
           setStartScroll(scrollTop);
         }
 
-        // Bereken het percentage vanaf het moment dat sticky bovenaan is
         const relativeScroll = scrollTop - startScroll;
         const relativeHeight = docHeight - startScroll;
         const scrollPosition = (relativeScroll / relativeHeight) * 100;
 
-        setScrollPercent(Math.min(Math.max(scrollPosition, 0), 100)); // Zorg dat het tussen 0-100 blijft
+        setScrollPercent(Math.min(Math.max(scrollPosition, 0), 100));
       } else {
-        setScrollPercent(0); // Reset als het element nog niet sticky is
-        setStartScroll(null); // Reset de referentie
+        setScrollPercent(0);
+        setStartScroll(null);
       }
     };
 
@@ -59,12 +57,35 @@ const Sticky_Component = ({ blok }) => {
         <a href="https://whatsapp.com" className="my-4 flex items-center justify-center w-10 h-10 bg-red text-white rounded-full">
           <FontAwesomeIcon icon={faWhatsapp} size="L" />
         </a>
-        <div
-          className="w-10 h-10 bg-white rounded-full"
-          style={{
-            background: `conic-gradient(#E94560 ${scrollPercent}%, #e5e7eb ${scrollPercent}%)`,
-          }}
-        />
+        <div className="relative flex items-center justify-center w-16 h-16 pr-6 pb-6">
+        <svg
+  className="absolute w-10 h-10"
+  viewBox="0 0 20 20"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <circle
+    className="text-silver"
+    stroke="currentColor"
+    strokeWidth="3"
+    fill="none"
+    cx="10"
+    cy="10"
+    r="8"
+  />
+  <circle
+    className="text-red"
+    stroke="currentColor"
+    strokeWidth="3"
+    strokeLinecap="round"
+    fill="none"
+    cx="10"
+    cy="10"
+    r="8"
+    strokeDasharray="50"
+    strokeDashoffset={`${50 - scrollPercent / 2}`}
+  />
+</svg>
+        </div>
       </div>
     </div>
   );
