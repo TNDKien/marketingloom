@@ -2,27 +2,82 @@ import { render } from "storyblok-rich-text-react-renderer";
 import { storyblokEditable } from "@storyblok/react/rsc";
 
 const Artikel = ({ blok }) => {
+  // Function to render labels with appropriate separators
+  const renderLabels = (labels) => {
+    if (!labels || labels.length === 0) return null;
+
+    return labels.map((label, index) => {
+      const isLast = index === labels.length - 1;
+      const separator = labels.length === 2 ? " • " : ", ";
+
+      // Add separator except for the last label
+      return (
+        <span key={index}>
+          {label}
+          {!isLast && <span className="text-black">{separator}</span>}
+        </span>
+      );
+    });
+  };
+
   return (
-    <article className="flex flex-col justify-center items-center min-h-screen">
-      <header className="container mx-auto m-8 max-w-[612px] text-center">
-        <h1 className="text-h1-desktop mb-6">{blok.titel}</h1>
-        <p className="mb-12">{blok.subtitel}</p>
-      </header>
-      <img src={blok.afbeelding.filename} alt={blok.afbeelding.alt} />
-      <div className="flex justify-between w-full px-24 pt-6">
-        <div className="flex flex-col">
-          {blok.auteur || "Author"}
-          {blok.datum || "Date"}
-        </div>
-        <label className="flex justify-center items-center gap-2" htmlFor="">
-          <span className="text-xs">&#9679;</span>
-          {blok.labels || "Label"}
-        </label>
+    <article
+      className="relative flex flex-col justify-center items-center pt-4 lg:pt-8 font-sans"
+      {...storyblokEditable(blok)}
+    >
+      {/* Line Groups as Background Elements */}
+      <div className="-z-10 w-full hidden lg:block">
+        <img
+          className="absolute top-[25vh] left-0 transform -translate-y-1/4 -translate-x-1/2 w-[300px] opacity-20"
+          src={blok.looms.filename}
+          alt={blok.looms.alt}
+        />
+        {/* <img
+          className="absolute top-[55%] right-0 transform scale-x-[-1] translate-y-1/4 translate-x-1/2 w-[300px] opacity-20"
+          src={blok.looms.filename}
+          alt={blok.looms.alt}
+        /> */}
+        <img
+          className="absolute bottom-[25vh] left-0 transform translate-y-1/4 -translate-x-1/2 w-[300px] opacity-20"
+          src={blok.looms.filename}
+          alt={blok.looms.alt}
+        />
       </div>
-      <section className="font-paragraaf prose max-w-[612px] mt-8 space-y-8 first-letter:font-standaard first-letter:text-4xl first-letter:font-bold first-letter:text-rood">
+      {/* Header Section */}
+      <header className="container px-4 lg:px-0 max-w-[800px] text-center">
+        <h1 className="lg:text-3xl text-2xl mb-6 font-semibold text-black">
+          {blok.titel}
+        </h1>
+        <p className="pb-8 text-lg font-light text-black">{blok.subtitel}</p>
+      </header>
+      {/* Main Image  */}
+      <div className="w-full overflow-hidden flex justify-center">
+        <img
+          className="w-full h-auto"
+          src={blok.afbeelding.filename}
+          alt={blok.afbeelding.alt}
+        />
+      </div>
+      {/* Metadata Section */}
+      <div className="flex items-start flex-col sm:flex-row sm:justify-between w-full p-4 pb-8 lg:px-24 text-sm gap-4">
+        <div className="flex flex-col gap-2">
+          <span className="font-semibold text-gray-900">
+            {blok.auteur || "Auteur"}
+          </span>
+          <span>{blok.datum || "Publicatie Datum"}</span>
+        </div>
+        <div className="flex items-end gap-2 sm:ml-0 ml-auto">
+          <span className="text-red font-medium sm:font-semibold">
+            {renderLabels(blok.labels || ["Label"])}
+          </span>
+        </div>
+      </div>
+      {/* Article Content */}
+      <section className="font-serif max-w-[612px] mt-8 px-4 space-y-12 first-letter:font-sans first-letter:text-4xl first-letter:font-bold first-letter:text-red">
         {render(blok.content)}
       </section>
     </article>
   );
 };
+
 export default Artikel;
