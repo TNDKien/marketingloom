@@ -3,17 +3,17 @@ import { storyblokEditable } from "@storyblok/react/rsc";
 const Artikel_Preview = ({ blok }) => {
   const interviews = [
     {
-      tijd: [blok.Tijd1, (" · "), blok.Auteur1],
+      tijd: [blok.Tijd1, " · ", blok.Auteur1],
       titel: blok.Titel1,
       afbeelding: blok.Afbeelding1.filename,
     },
     {
-      tijd: [blok.Tijd2, (" · "), blok.Auteur2],
+      tijd: [blok.Tijd2, " · ", blok.Auteur2],
       titel: blok.Titel2,
       afbeelding: blok.Afbeelding2.filename,
     },
     {
-      tijd: [blok.Tijd3, (" · "), blok.Auteur3],
+      tijd: [blok.Tijd3, " · ", blok.Auteur3],
       titel: blok.Titel3,
       afbeelding: blok.Afbeelding3.filename,
     },
@@ -22,21 +22,21 @@ const Artikel_Preview = ({ blok }) => {
   const evenementen = [
     {
       titel: blok.Titel4,
-      datum: [blok.Datum1, (", "), blok.Auteur4],
+      datum: [blok.Datum1, ", ", blok.Auteur4],
       locatie: blok.Locatie1,
       afbeelding: blok.Afbeelding4.filename,
       link: "#",
     },
     {
       titel: blok.Titel5,
-      datum: [blok.Datum2, (", "), blok.Auteur5],
+      datum: [blok.Datum2, ", ", blok.Auteur5],
       locatie: blok.Locatie2,
       afbeelding: blok.Afbeelding5.filename,
       link: "#",
     },
     {
       titel: blok.Titel6,
-      datum: [blok.Datum3, (", "), blok.Auteur6],
+      datum: [blok.Datum3, ", ", blok.Auteur6],
       locatie: blok.Locatie3,
       afbeelding: blok.Afbeelding6.filename,
       link: "#",
@@ -45,7 +45,7 @@ const Artikel_Preview = ({ blok }) => {
 
   return (
     <div
-      className="grid grid-cols-2 gap-8 p-24 text-black"
+      className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 sm:p-12 lg:p-24 text-black"
       {...storyblokEditable(blok)}
     >
       {/* Interviews Sectie */}
@@ -77,7 +77,7 @@ const Artikel_Preview = ({ blok }) => {
         {evenementen.map((item, index) => (
           <div
             key={index}
-            className="flex items-start gap-4 mb-4 border-b pb-2 border-red"
+            className="flex flex-col md:flex-row items-start gap-4 mb-4 border-b pb-2 border-red"
           >
             <img
               src={item.afbeelding}
@@ -91,7 +91,7 @@ const Artikel_Preview = ({ blok }) => {
             </div>
             <a
               href={item.link}
-              className="ml-auto self-center text-label-desktop font-semibold hover:underline"
+              className="mt-4 md:mt-12 self-start text-label-desktop font-semibold hover:underline"
             >
               Meld je nu aan →
             </a>
