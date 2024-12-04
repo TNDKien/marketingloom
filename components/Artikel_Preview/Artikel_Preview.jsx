@@ -1,63 +1,105 @@
 import { storyblokEditable } from "@storyblok/react/rsc";
 
-const Artikel_Preview = ({ blok }) => (
-  <div
-    className="grid grid-cols-2 gap-8 p-20 text-black"
-    {...storyblokEditable(blok)}
-  >
-    <div>
-      <h2 className="text-h2-desktop mb-4">Interviews</h2>
-      {[...Array(3)].map((_, index) => (
-        <div
-          key={index}
-          className="flex items-start gap-4 mb-4 border-b pb-2 border-red"
-        >
-          <img
-            src="/path-to-placeholder.jpg"
-            alt="Thumbnail"
-            className="w-20 h-20 object-cover"
-          />
-          <div>
-            <p className="text-label-desktop text-silver">11:03 · Marcel de Vries</p>
-            <p className="text-p-large-desktop font-medium pt-1">
-              Monteurs bij Transavia eisen meer loon en dreigen met acties
-            </p>
-          </div>
-        </div>
-      ))}
-    </div>
+const Artikel_Preview = ({ blok }) => {
+  const interviews = [
+    {
+      tijd: [blok.Tijd1, (" · "), blok.Auteur1],
+      titel: blok.Titel1,
+      afbeelding: blok.Afbeelding1.filename,
+    },
+    {
+      tijd: [blok.Tijd2, (" · "), blok.Auteur2],
+      titel: blok.Titel2,
+      afbeelding: blok.Afbeelding2.filename,
+    },
+    {
+      tijd: [blok.Tijd3, (" · "), blok.Auteur3],
+      titel: blok.Titel3,
+      afbeelding: blok.Afbeelding3.filename,
+    },
+  ];
 
-    <div>
-      <h2 className="text-h2-desktop mb-4">Evenementen & Webinars</h2>
-      {[...Array(3)].map((_, index) => (
-        <div
-          key={index}
-          className="flex items-start gap-4 mb-4 border-b pb-2 border-red"
-        >
-          <img
-            src="/path-to-placeholder.jpg"
-            alt="Thumbnail"
-            className="w-20 h-20 object-cover"
-          />
-          <div className="flex-1">
-            <p className="text-p-large-desktop text-red pb-1">Online Marketing Dag</p>
-            <p className="text-label-desktop text-silver pb-1">
-              Dinsdag 9 november, 09:30
-            </p>
-            <p className="text-alt-desktop font-semibold">
-              Breda University of Applied Sciences
-            </p>
-          </div>
-          <a
-            href="#"
-            className="ml-auto mt-12 text-label-desktop font-semibold hover:underline"
+  const evenementen = [
+    {
+      titel: blok.Titel4,
+      datum: [blok.Datum1, (", "), blok.Auteur4],
+      locatie: blok.Locatie1,
+      afbeelding: blok.Afbeelding4.filename,
+      link: "#",
+    },
+    {
+      titel: blok.Titel5,
+      datum: [blok.Datum2, (", "), blok.Auteur5],
+      locatie: blok.Locatie2,
+      afbeelding: blok.Afbeelding5.filename,
+      link: "#",
+    },
+    {
+      titel: blok.Titel6,
+      datum: [blok.Datum3, (", "), blok.Auteur6],
+      locatie: blok.Locatie3,
+      afbeelding: blok.Afbeelding6.filename,
+      link: "#",
+    },
+  ];
+
+  return (
+    <div
+      className="grid grid-cols-2 gap-8 p-24 text-black"
+      {...storyblokEditable(blok)}
+    >
+      {/* Interviews Sectie */}
+      <div>
+        <h2 className="text-h2-desktop mb-4">Interviews</h2>
+        {interviews.map((item, index) => (
+          <div
+            key={index}
+            className="flex items-start gap-4 mb-4 border-b pb-2 border-red"
           >
-            Meld je nu aan →
-          </a>
-        </div>
-      ))}
+            <img
+              src={item.afbeelding}
+              alt="Thumbnail"
+              className="w-28 h-20 object-cover"
+            />
+            <div>
+              <p className="text-label-desktop text-silver">{item.tijd}</p>
+              <p className="text-p-large-desktop font-medium pt-1">
+                {item.titel}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Evenementen & Webinars Sectie */}
+      <div>
+        <h2 className="text-h2-desktop mb-4">Evenementen & Webinars</h2>
+        {evenementen.map((item, index) => (
+          <div
+            key={index}
+            className="flex items-start gap-4 mb-4 border-b pb-2 border-red"
+          >
+            <img
+              src={item.afbeelding}
+              alt="Thumbnail"
+              className="w-28 h-20 object-cover"
+            />
+            <div className="flex-1">
+              <p className="text-p-large-desktop text-red pb-1">{item.titel}</p>
+              <p className="text-label-desktop text-silver pb-1">{item.datum}</p>
+              <p className="text-alt-desktop font-semibold">{item.locatie}</p>
+            </div>
+            <a
+              href={item.link}
+              className="ml-auto self-center text-label-desktop font-semibold hover:underline"
+            >
+              Meld je nu aan →
+            </a>
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Artikel_Preview;
