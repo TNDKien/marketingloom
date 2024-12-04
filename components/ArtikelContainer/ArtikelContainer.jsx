@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { getStoryblokApi, storyblokEditable } from "@storyblok/react";
 import ArtikelTeaser from "../ArtikelTeaser/ArtikelTeaser";
 
-const AlleArtikelen = ({ blok }) => {
+const ArtikelContainer = ({ blok }) => {
   const [artikelen, setArtikelen] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -30,9 +30,7 @@ const AlleArtikelen = ({ blok }) => {
 
         setArtikelen(formattedArtikelen);
       } catch (error) {
-        console.error("Error fetching artikelen:", error);
-      } finally {
-        setLoading(false);
+        console.error("Failed to fetch articles", error);
       }
     };
 
@@ -41,14 +39,19 @@ const AlleArtikelen = ({ blok }) => {
 
   return (
     <section className="p-6 lg:px-24" {...storyblokEditable(blok)}>
-      <p className="text-3xl font-bold mb-6">{blok.titel}</p>
-      <div className="flex overflow-x-auto">
+      <p className="text-h2-desktop font-bold mb-6">{blok.titel}</p>
+      <div className="flex overflow-x-auto gap-6">
         {artikelen.map((article) => (
-          <ArtikelTeaser article={article} key={article.slug} />
+          <ArtikelTeaser
+            article={article}
+            key={article.slug}
+            className="w-72 h-auto flex-shrink-0" // Ensure fixed width and height
+            imgClassName="h-48"
+          />
         ))}
       </div>
     </section>
   );
 };
 
-export default AlleArtikelen;
+export default ArtikelContainer;
