@@ -1,50 +1,43 @@
 import { storyblokEditable } from "@storyblok/react/rsc";
 
-const Nieuwsbrief = ({ blok }) => (
-  <div
-    className="text-black flex flex-col md:flex-row items-center p-6 rounded-md"
-    {...storyblokEditable(blok)}
-  >
-    {/* Linker sectie met label */}
-<div className="flex-shrink-0 rounded-l-lg text-center p-4">
-  {blok.image && (
-    <img
-      src={blok.image.filename}
-      alt={blok.image.alt || "Label Image"}
-      className="mx-auto mb-2 w-12 h-12"
-    />
-  )}
-  <h2 className="text-lg font-semibold">{blok.Label}</h2>
+const Nieuwsbrief = ({ blok }) => {
+  return (
+    <div className="flex w-full bg-slate-400" {...storyblokEditable(blok)}>
+  {/* Linkerkant */}
+<div className="flex-1 bg-cover bg-center text-wit relative flex items-center justify-center" style={{ backgroundImage: `url(${blok.leftimage.filename})` }}>
+  {/* Tekst die over de afbeelding komt */}
+  <div className="absolute text-xl">{blok.tekstlinks}</div>
 </div>
 
-    {/* Rechter sectie met titel en formulier */}
-    <div className="flex-grow px-6">
-      <h2 className="text-2xl font-bold mb-4">{blok.Titel}</h2>
-      <p className="mb-4">{blok.Subtitel}</p>
-      <div className="flex flex-col md:flex-row gap-4 items-center">
-        <div className="flex items-center gap-2">
-          <label>
-            <input type="checkbox" className="mr-2" />
-            Dagelijkse nieuwsbrief
-          </label>
-          <label>
-            <input type="checkbox" className="mr-2" />
-            Wekelijkse nieuwsbrief
-          </label>
-        </div>
-        <div className="flex items-center gap-2">
-          <input
-            type="email"
-            placeholder="E-mailadres"
-            className="p-2  bg-gray-700 text-white focus:outline-none"
-          />
-          <button className="bg-red text-white px-4 py-2 rounded-md">
-            Inschrijven
-          </button>
-        </div>
-      </div>
+
+  {/* Rechterkant */}
+  <div className="flex-1 p-6 text-wit">
+    <h2 className="text-2xl font-semibold mb-4 text-wit">{blok.titel}</h2>
+    <div className="flex space-x-4 mb-4">
+      <label className="flex items-center space-x-2">
+                <span>{blok.checkbox1label}</span>
+        <input type="checkbox" className="form-checkbox" />
+      </label>
+      <label className="flex items-center space-x-2">
+                <span>{blok.checkbox2label}</span>
+        <input type="checkbox" className="form-checkbox" />
+      </label>
+    </div>
+    <div className="flex space-x-4">
+      <input 
+        type="email" 
+        className="border p-2 w-full" 
+        placeholder={blok.inputPlaceholder} 
+      />
+      <button className="bg-rood text-wit p-2">
+        {blok.buttontekst}
+      </button>
     </div>
   </div>
-);
+</div>
+
+  );
+};
 
 export default Nieuwsbrief;
+
