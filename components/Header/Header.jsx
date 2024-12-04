@@ -10,20 +10,20 @@ const Header = ({ blok }) => {
   };
 
   return (
-    <div className="-28 mt-0" {...storyblokEditable(blok)}>
+    <div className="h-28 mt-0" {...storyblokEditable(blok)}>
       {/* nav bar */}
-      <nav className="flex ml-24 mr-24 justify-between pb-8">
+      <nav className="flex ml-4 mr-4 justify-between pb-8 sm:ml-24 sm:mr-24">
         <div className="w-3/12">
           <a href="/">
             <img
-              className=" mt-8 h-12 mt-8"
+              className="mt-8 h-12 mt-8 w-auto h-12"
               src={blok.logo.filename}
               alt={blok.logo.alt || "Logo"}
             />
           </a>
         </div>
-        <ul className="flex mt-12 w-6/12 justify-between text-zwart text-xl">
-          <li>
+        <ul className="flex flex-wrap mt-12 w-6/12 justify-between text-zwart text-xl">
+          <li className="hidden sm:block">
             <div className="hover-container">
               <a href="/Home" className="hover:text-rood">
                 Home
@@ -31,7 +31,7 @@ const Header = ({ blok }) => {
               <div className="hover-line"></div>
             </div>
           </li>
-          <li className="flex">
+          <li className="flex hidden sm:block">
             <button
               className="hover:text-rood flex justify-center"
               onClick={toggleMenu} // Toggle het menu bij klikken
@@ -54,7 +54,7 @@ const Header = ({ blok }) => {
               </svg>
             </button>
           </li>
-          <li>
+          <li className="hidden sm:block">
             <div className="hover-container">
               <a href="/Interviews" className="hover:text-rood">
                 Interviews
@@ -62,7 +62,7 @@ const Header = ({ blok }) => {
               <div className="hover-line"></div>
             </div>
           </li>
-          <li>
+          <li className="hidden sm:block">
             <div className="hover-container">
               <a href="/Artikelen" className="hover:text-rood">
                 Artikelen
@@ -70,7 +70,7 @@ const Header = ({ blok }) => {
               <div className="hover-line"></div>
             </div>
           </li>
-          <li>
+          <li className="hidden sm:block">
             <div className="hover-container">
               <a href="/Artikelen" className="hover:text-rood">
                 Evenementen
@@ -84,21 +84,27 @@ const Header = ({ blok }) => {
         <div className="w-3/12">
           <div className="flex justify-end">
             <img
-              className="mt-12"
+              className="mt-12 "
               src={blok.zoek.filename}
               alt={blok.zoek.alt || "Zoek"}
             />
 
             {/* Aboneer knop */}
-            <button className="text-white bg-rood px-4 py-1 mt-12 ml-6 font-semibold">
+            <button className=" hidden sm:block text-white bg-rood px-4 py-1 mt-12 ml-6 font-semibold">
               Aboneer
             </button>
 
             {/* Kleurmodus knop */}
             <img
-              className="mt-12 ml-6"
+              className="hidden sm:block mt-12 ml-6"
               src={blok.modus.filename}
               alt={blok.modus.alt || "Kleurmodus knop"}
+            />
+
+            <img
+              className="block sm:hidden mt-12 ml-6"
+              src={blok.menu.filename}
+              alt={blok.menu.alt || "Hamburger menu"}
             />
           </div>
         </div>
