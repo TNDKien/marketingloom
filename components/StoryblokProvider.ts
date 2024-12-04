@@ -31,9 +31,11 @@ import ArtikelContainer from "./ArtikelContainer/ArtikelContainer";
 import PopulaireArtikelen from "./PopulaireArtikelen/PopulaireArtikelen";
 import ArtikelTeaser from "./ArtikelTeaser/ArtikelTeaser";
 import Eyecatcher from "./Eyecatcher/Eyecatcher";
+import Artikel_Preview from "./Artikel_Preview/Artikel_Preview";
 
 const components = {
   page: Page,
+  artikel_preview: Artikel_Preview,
   template: Template,
   artikel: Artikel,
   account: Account,
