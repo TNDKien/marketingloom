@@ -23,7 +23,7 @@ const Header = ({ blok }) => {
           </a>
         </div>
         <ul className="flex flex-wrap mt-12 w-6/12 justify-between text-zwart text-xl">
-          <li className="hidden sm:block">
+          <li className="hidden md:block">
             <div className="hover-container">
               <a href="/Home" className="hover:text-rood">
                 Home
@@ -31,7 +31,7 @@ const Header = ({ blok }) => {
               <div className="hover-line"></div>
             </div>
           </li>
-          <li className="flex hidden sm:block">
+          <li className="flex hidden md:block">
             <button
               className="hover:text-rood flex justify-center"
               onClick={toggleMenu} // Toggle het menu bij klikken
@@ -54,7 +54,7 @@ const Header = ({ blok }) => {
               </svg>
             </button>
           </li>
-          <li className="hidden sm:block">
+          <li className="hidden md:block">
             <div className="hover-container">
               <a href="/Interviews" className="hover:text-rood">
                 Interviews
@@ -62,7 +62,7 @@ const Header = ({ blok }) => {
               <div className="hover-line"></div>
             </div>
           </li>
-          <li className="hidden sm:block">
+          <li className="hidden md:block">
             <div className="hover-container">
               <a href="/Artikelen" className="hover:text-rood">
                 Artikelen
@@ -70,7 +70,7 @@ const Header = ({ blok }) => {
               <div className="hover-line"></div>
             </div>
           </li>
-          <li className="hidden sm:block">
+          <li className="hidden md:block">
             <div className="hover-container">
               <a href="/Artikelen" className="hover:text-rood">
                 Evenementen
@@ -101,6 +101,7 @@ const Header = ({ blok }) => {
               alt={blok.modus.alt || "Kleurmodus knop"}
             />
 
+            {/* Hamburger menu komt tevoorschijnt als mobile device is */}
             <img
               className="block sm:hidden mt-12 ml-6"
               src={blok.menu.filename}
