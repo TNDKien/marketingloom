@@ -11,13 +11,13 @@ const Account = ({ blok }) => {
       <div className="w-full max-w-md p-8">
         {/* Header */}
         <div className="flex items-center mb-6">
-          <h1 className="pt-8 text-5xl font-light text-black text-left mr-4">
+          <h1 className="pt-8 text-4xl sm:text-5xl font-light text-black text-left mr-4">
             Marketing
           </h1>
           <img
             src={blok.afbeelding.filename}
             alt={blok.afbeelding.alt}
-            className="w-36 h-full object-cover"
+            className="w-24 mt-2 sm:w-32 max-w-full object-cover"
           />
         </div>
 
@@ -26,7 +26,7 @@ const Account = ({ blok }) => {
           {/* Email Input */}
           <div>
             <label htmlFor="email" className="block text-paragraph text-black mb-2">
-            Inloggen bij Marketing Loom
+              Inloggen bij Marketing Loom
             </label>
             <input
               type="email"
