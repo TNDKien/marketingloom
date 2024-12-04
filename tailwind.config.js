@@ -14,6 +14,7 @@ module.exports = {
         white: "#F5F3F5",
         red: "#E94560",
         silver: "#AFAFAF",
+        standard_red: "#de5246",
       },
       fontFamily: {
         serif: ["IBM Plex Serif", "serif"],
