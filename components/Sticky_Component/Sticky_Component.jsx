@@ -66,7 +66,7 @@ const Sticky_Component = ({ blok }) => {
   <circle
     className="text-silver"
     stroke="currentColor"
-    strokeWidth="3"
+    strokeWidth="2"
     fill="none"
     cx="10"
     cy="10"
@@ -75,7 +75,7 @@ const Sticky_Component = ({ blok }) => {
   <circle
     className="text-red"
     stroke="currentColor"
-    strokeWidth="3"
+    strokeWidth="2"
     strokeLinecap="round"
     fill="none"
     cx="10"
