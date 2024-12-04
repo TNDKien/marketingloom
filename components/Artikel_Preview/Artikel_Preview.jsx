@@ -22,21 +22,21 @@ const Artikel_Preview = ({ blok }) => {
   const evenementen = [
     {
       titel: blok.Titel4,
-      datum: [blok.Datum1, ", ", blok.Auteur4],
+      datum: [blok.Datum1, ", ", blok.Tijd4],
       locatie: blok.Locatie1,
       afbeelding: blok.Afbeelding4.filename,
       link: "#",
     },
     {
       titel: blok.Titel5,
-      datum: [blok.Datum2, ", ", blok.Auteur5],
+      datum: [blok.Datum2, ", ", blok.Tijd5],
       locatie: blok.Locatie2,
       afbeelding: blok.Afbeelding5.filename,
       link: "#",
     },
     {
       titel: blok.Titel6,
-      datum: [blok.Datum3, ", ", blok.Auteur6],
+      datum: [blok.Datum3, ", ", blok.Tijd6],
       locatie: blok.Locatie3,
       afbeelding: blok.Afbeelding6.filename,
       link: "#",
