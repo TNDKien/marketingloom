@@ -16,12 +16,25 @@ const EvenementenContainer = ({ blok }) => {
           is_startpage: false,
         });
 
-        // Format the fetched events
-        const formattedEvenementen = data.stories.map((event) => ({
+        // Filter out the event with the name 'Home'
+        const filteredEvents = data.stories.filter(
+          (event) => event.name !== "home"
+        );
+
+        // Format the filtered events
+        const formattedEvenementen = filteredEvents.map((event) => ({
           titel: event.content.titel || event.name,
           subtitel: event.content.subtitel || "",
-          afbeelding: event.content.afbeelding || null,
+          afbeelding: event.content.afbeelding || {
+            filename: "/placeholder.png",
+            alt: "Placeholder",
+          },
           slug: event.full_slug,
+          datum: event.content.datum || "Onbekend",
+          tijden: event.content.tijden || "Niet gespecificeerd",
+          locatie: event.content.locatie || "Onbekende locatie",
+          slogan: event.content.slogan || "",
+          intro: event.content.intro_tekst || "",
         }));
 
         setEvenementen(formattedEvenementen);
@@ -38,13 +51,13 @@ const EvenementenContainer = ({ blok }) => {
       <p className="text-h2-desktop font-bold mb-6">
         {blok.titel || "Evenementen"}
       </p>
-      <div className="flex overflow-x-auto gap-6">
+      <div className="flex flex-col gap-6">
         {evenementen.map((event) => (
+          // console.log(event),
           <EvenementTeaser
             key={event.slug}
             event={event}
-            className="w-72 h-auto flex-shrink-0"
-            imgClassName="h-48"
+            className="w-1/2 h-48 flex-shrink-0"
           />
         ))}
       </div>
