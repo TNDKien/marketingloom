@@ -6,8 +6,8 @@ const Blok_Container = ({ blok }) => {
   console.log("Ontvangen blok:", blok);
 
   return (
-    <div {...storyblokEditable(blok)} className="p-0 lg:px-32">
-      <div className="flex flex-col lg:flex-row lg:flex-wrap lg:justify-between lg:gap-y-8">
+    <div {...storyblokEditable(blok)} className="p-0 lg:px-24">
+      <div className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-between">
         {(blok.componenten || blok.components)?.map((nestedBlok) => {
           console.log("Rendering component:", nestedBlok.component);
 
