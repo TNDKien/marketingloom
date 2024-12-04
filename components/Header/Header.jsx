@@ -1,12 +1,17 @@
 import { storyblokEditable } from "@storyblok/react/rsc";
-import "./HoverEffect.css";
 import { useState } from "react"; //useState kijkt in welke staat het is
+import "./HoverEffect.css";
 
 const Header = ({ blok }) => {
-  const [isMenuVisible, setIsMenuVisible] = useState(false); // State om menu te tonen
+  const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false); // Mobile menu
+  const [isNewsMenuVisible, setIsNewsMenuVisible] = useState(false); // Nieuws submenu
 
-  const toggleMenu = () => {
-    setIsMenuVisible((prev) => !prev); // Wissel tussen tonen en verbergen
+  const toggleMobileMenu = () => {
+    setIsMobileMenuVisible((prev) => !prev); // Toggle mobiele menu
+  };
+
+  const toggleNewsMenu = () => {
+    setIsNewsMenuVisible((prev) => !prev); // Toggle nieuws submenu
   };
 
   return (
@@ -34,7 +39,7 @@ const Header = ({ blok }) => {
           <li className="flex hidden md:block">
             <button
               className="hover:text-rood flex justify-center"
-              onClick={toggleMenu} // Toggle het menu bij klikken
+              onClick={toggleNewsMenu} // Toggle het menu bij klikken
             >
               Nieuws
               {/* SVG voor pijl die naar beneden wijst */}
@@ -43,7 +48,7 @@ const Header = ({ blok }) => {
                 viewBox="0 0 24 24"
                 fill="currentColor"
                 className={`w-6 h-6 transform transition-transform duration-300 ${
-                  isMenuVisible ? "scale-y-[-1]" : ""
+                  isNewsMenuVisible ? "scale-y-[-1]" : ""
                 }`}
               >
                 <path
@@ -54,6 +59,7 @@ const Header = ({ blok }) => {
               </svg>
             </button>
           </li>
+
           <li className="hidden md:block">
             <div className="hover-container">
               <a href="/Interviews" className="hover:text-rood">
@@ -106,15 +112,47 @@ const Header = ({ blok }) => {
               className="block sm:hidden mt-12 ml-6"
               src={blok.menu.filename}
               alt={blok.menu.alt || "Hamburger menu"}
+              onClick={toggleMobileMenu}
             />
           </div>
         </div>
       </nav>
 
-      {/* Uitklapmenu */}
-      {isMenuVisible && ( //wordt getoont als isMenuVisible true is
-        <div className="h-72 bg-zwart">
-          <div className="ml-24 mr-24 flex flex-row justify-between">
+      {/* Mobile Menu */}
+      {isMobileMenuVisible && (
+        <div className="md:hidden font-standaard font-normal w-full bg-zwart text-white p-4 z-2">
+          <ul className="flex flex-col">
+            <li className="py-2">
+              <a href="/Home">Home</a>
+            </li>
+            <li className="py-2">
+              <a href="/Nieuws">Nieuws</a>
+            </li>
+            <li className="py-2">
+              <a href="/Interviews">Interviews</a>
+            </li>
+            <li className="py-2">
+              <a href="/Artikelen">Artikelen</a>
+            </li>
+            <li className="py-2">
+              <a href="/Artikelen">Evenementen</a>
+            </li>
+            <li className="py-2">
+              <a href="/Artikelen">Tip de redactie</a>
+            </li>
+
+            {/* Aboneer knop */}
+            <button className=" hidden sm:block text-white bg-rood px-4 py-1 mt-12 ml-6 font-semibold">
+              Aboneer
+            </button>
+          </ul>
+        </div>
+      )}
+
+      {/* Uitklapmenu nieuws */}
+      {isNewsMenuVisible && ( //wordt getoont als isMenuVisible true is
+        <div className="sm:h-72 bg-zwart">
+          <div className="ml-24 mr-24 flex justify-between">
             {/* Innovaties list */}
             <ul className="">
               <div className="hover-container">
