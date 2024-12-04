@@ -31,6 +31,7 @@ import Verkoop from "./Verkoop/Verkoop";
 import ArtikelContainer from "./ArtikelContainer/ArtikelContainer";
 import Populaire_Artikelen from "./Populaire_Artikelen/Populaire_Artikelen";
 import ArtikelTeaser from "./ArtikelTeaser/ArtikelTeaser";
+import Blok_Container from "./Blok_Container/Blok_Container";
 
 const components = {
   page: Page,
@@ -59,9 +60,12 @@ const components = {
   artikelcontainer: ArtikelContainer,
   populaire_artikelen: Populaire_Artikelen,
   artikelteaser: ArtikelTeaser,
+  blok_container: Blok_Container,
 };
 
 storyblokInit({
+
+  
   accessToken: process.env.NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN,
   use: [apiPlugin],
   components: components as SbReactComponentsMap,
