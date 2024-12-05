@@ -120,14 +120,179 @@ const Header = ({ blok }) => {
 
       {/* Mobile Menu */}
       {isMobileMenuVisible && (
-        <div className="md:hidden font-standaard font-normal w-full bg-zwart text-white p-4 z-2">
+        <div className="sm:hidden font-standaard font-normal w-full bg-zwart text-white p-4 z-2">
           <ul className="flex flex-col">
             <li className="py-2">
               <a href="/Home">Home</a>
             </li>
             <li className="py-2">
-              <a href="/Nieuws">Nieuws</a>
+              <button
+                className="hover:text-rood flex justify-center"
+                onClick={toggleNewsMenu} // Toggle het menu bij klikken
+              >
+                Nieuws
+                {/* SVG voor pijl die naar beneden wijst */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className={`w-6 h-6 transform transition-transform duration-300 ${
+                    isNewsMenuVisible ? "scale-y-[-1]" : ""
+                  }`}
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M12 16.5a.75.75 0 01-.53-.22l-6-6a.75.75 0 111.06-1.06L12 14.94l5.47-5.47a.75.75 0 111.06 1.06l-6 6a.75.75 0 01-.53.22z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
             </li>
+
+            {/* Uitklapmenu nieuws */}
+            {isNewsMenuVisible && ( //wordt getoont als isMenuVisible true is
+              <div className="sm:h-72 bg-zwart">
+                <div className="sm:mx-24 mx-4 flex flex-col sm:flex-row justify-between z-3">
+                  {/* Innovaties list */}
+                  <ul className="">
+                    <div className="hover-container">
+                      <li className="mt-12 py-2">
+                        <a className="text-rood">Innovaties</a>
+                        <div className="hover-line"></div>
+                      </li>
+                    </div>
+                    <li className="py-2">
+                      <a className="text-wit hover:text-rood">AI</a>
+                    </li>
+                    <li className="py-2">
+                      <a className="text-wit hover:text-rood">AR & VR</a>
+                    </li>
+                    <li className="py-2">
+                      <a className="text-wit hover:text-rood">
+                        Tech Doorbraken
+                      </a>
+                    </li>
+                    <li className="py-2">
+                      <a className="text-wit hover:text-rood">
+                        Mobiele Innovaties
+                      </a>
+                    </li>
+                  </ul>
+
+                  {/* Social Media */}
+                  <ul className="">
+                    <div className="hover-container">
+                      <li className="mt-12 py-2">
+                        <a className="text-rood">Social Media</a>
+                        <div className="hover-line"></div>
+                      </li>
+                    </div>
+                    <li className="py-2">
+                      <a href="" className="text-wit hover:text-rood">
+                        Content Creatie
+                      </a>
+                    </li>
+                    <li className="py-2">
+                      <a href="" className="text-wit hover:text-rood">
+                        Platform Updates
+                      </a>
+                    </li>
+                    <li className="py-2">
+                      <a href="" className="text-wit hover:text-rood">
+                        Influencer Marketing
+                      </a>
+                    </li>
+                    <li className="py-2">
+                      <a href="" className="text-wit hover:text-rood">
+                        Social Advertising
+                      </a>
+                    </li>
+                  </ul>
+
+                  {/* Content & strategie*/}
+                  <ul className="">
+                    <div className="hover-container">
+                      <li className="mt-12 py-2">
+                        <a href="" className="text-rood">
+                          SEO
+                        </a>
+                        <div className="hover-line"></div>
+                      </li>
+                    </div>
+                    <li className="py-2">
+                      <a href="" className="text-wit hover:text-rood">
+                        Content Marketing
+                      </a>
+                    </li>
+                    <li className="py-2">
+                      <a href="" className="text-wit hover:text-rood">
+                        Storytelling
+                      </a>
+                    </li>
+                    <li className="py-2">
+                      <a href="" className="text-wit hover:text-rood">
+                        Copywriting
+                      </a>
+                    </li>
+                  </ul>
+
+                  {/* Data & Analytics */}
+                  <ul className="">
+                    <div className="hover-container">
+                      <li className="mt-12 py-2">
+                        <a href="" className="text-rood">
+                          Big data
+                        </a>
+                        <div className="hover-line"></div>
+                      </li>
+                    </div>
+                    <li className="py-2">
+                      <a href="" className="text-wit hover:text-rood">
+                        Web Analystics
+                      </a>
+                    </li>
+                    <li className="py-2">
+                      <a href="" className="text-wit hover:text-rood">
+                        Performance Metrics
+                      </a>
+                    </li>
+                    <li className="py-2">
+                      <a href="" className="text-wit hover:text-rood">
+                        Klantinzichten
+                      </a>
+                    </li>
+                  </ul>
+
+                  {/* Campagnes & Reclame */}
+                  <ul className="">
+                    <div className="hover-container">
+                      <li className="mt-12 py-2">
+                        <a href="" className="text-rood">
+                          Creative Concepten
+                        </a>
+                        <div className="hover-line"></div>
+                      </li>
+                    </div>
+                    <li className="py-2">
+                      <a href="" className="text-wit hover:text-rood">
+                        Succesverhalen
+                      </a>
+                    </li>
+                    <li className="py-2">
+                      <a href="" className="text-wit hover:text-rood">
+                        Video & TV
+                      </a>
+                    </li>
+                    <li className="py-2">
+                      <a href="" className="text-wit hover:text-rood">
+                        Buitenreclame
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            )}
+
             <li className="py-2">
               <a href="/Interviews">Interviews</a>
             </li>
@@ -142,21 +307,29 @@ const Header = ({ blok }) => {
             </li>
 
             {/* Aboneer knop */}
-            <button className=" hidden sm:block text-white bg-rood px-4 py-1 mt-12 ml-6 font-semibold">
-              Aboneer
-            </button>
+            <div className="flex flex-row justify-between">
+              <button className=" w-32 text-white bg-rood px-2 py-1 font-semibold z-3">
+                Aboneer
+              </button>
+
+              {/* Kleurmodus knop */}
+              <img
+                className=""
+                src={blok.modus.filename}
+                alt={blok.modus.alt || "Kleurmodus knop"}
+              />
+            </div>
           </ul>
         </div>
       )}
-
       {/* Uitklapmenu nieuws */}
       {isNewsMenuVisible && ( //wordt getoont als isMenuVisible true is
-        <div className="sm:h-72 bg-zwart">
-          <div className="ml-24 mr-24 flex justify-between">
+        <div className="hidden  sm:block sm:h-72 bg-zwart">
+          <div className="sm:mx-24 mx-4 flex flex-col sm:flex-row justify-between z-3">
             {/* Innovaties list */}
             <ul className="">
               <div className="hover-container">
-                <li className="mt-12 py-2">
+                <li className="mt-12 sm:mt-4 mt-1 py-2">
                   <a className="text-rood">Innovaties</a>
                   <div className="hover-line"></div>
                 </li>
