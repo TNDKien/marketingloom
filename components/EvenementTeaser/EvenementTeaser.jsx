@@ -9,7 +9,7 @@ const EvenementTeaser = ({ event, className, imgClassName }) => {
 
   return (
     <div
-      className={`flex flex-row w-full mr-6 ${className}`}
+      className={`flex flex-row w-full ${className}`}
       {...storyblokEditable(event)}
     >
       <section className="relative w-1/2 h-48 flex overflow-hidden">
@@ -39,7 +39,7 @@ const EvenementTeaser = ({ event, className, imgClassName }) => {
           </div>
         </div>
       </section>
-      <section className="flex flex-col justify-between w-1/2 m-2">
+      <section className="flex flex-col justify-between w-1/2 my-2 ml-6">
         <div className="flex flex-wrap items-center gap-2 text-label-mobile lg:text-base">
           <span className="flex items-center gap-2">
             <span
