@@ -1,12 +1,13 @@
 import { storyblokEditable } from "@storyblok/react/rsc";
 
 const Artikel_Hero = ({ blok }) => (
-  <div className=" bg-blue-500 text-white" {...storyblokEditable(blok)}>
-    <h1 className=" text-4xl font-bold">{blok.Titel}</h1>
+  <div className="z-2" {...storyblokEditable(blok)}>
+    <div className="bg-blue-500">{blok.titel}</div>
+    <div className="bg-blue-500">{blok.inleiding}</div>
     <img
-      className="w-1/2"
-      src={blok.Afbeelding.filename}
-      alt={blok.Afbeelding.alt}
+      className="z-1"
+      src={blok.artikel_afbeelding.filename}
+      alt={blok.artikel_afbeelding.alt || "Logo"}
     />
   </div>
 );
