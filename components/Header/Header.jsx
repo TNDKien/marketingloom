@@ -15,7 +15,7 @@ const Header = ({ blok }) => {
   };
 
   return (
-    <div className="h-28 mt-0" {...storyblokEditable(blok)}>
+    <div className="z-10 h-28 mt-0 " {...storyblokEditable(blok)}>
       {/* nav bar */}
       <nav className="flex ml-4 mr-4 justify-between pb-8 sm:ml-24 sm:mr-24">
         <div className="w-3/12">
@@ -27,10 +27,10 @@ const Header = ({ blok }) => {
             />
           </a>
         </div>
-        <ul className="flex flex-wrap mt-12 w-6/12 justify-between text-zwart text-xl">
+        <ul className="flex flex-wrap mt-12 w-6/12 justify-between text-black text-p-large-desktop">
           <li className="hidden md:block">
             <div className="hover-container">
-              <a href="/Home" className="hover:text-rood">
+              <a href="/Home" className="hover:text-red">
                 Home
               </a>
               <div className="hover-line"></div>
@@ -38,7 +38,7 @@ const Header = ({ blok }) => {
           </li>
           <li className="flex hidden md:block">
             <button
-              className="hover:text-rood flex justify-center"
+              className="hover:text-red flex justify-center"
               onClick={toggleNewsMenu} // Toggle het menu bij klikken
             >
               Nieuws
@@ -62,7 +62,7 @@ const Header = ({ blok }) => {
 
           <li className="hidden md:block">
             <div className="hover-container">
-              <a href="/Interviews" className="hover:text-rood">
+              <a href="/Interviews" className="hover:text-red">
                 Interviews
               </a>
               <div className="hover-line"></div>
@@ -70,7 +70,7 @@ const Header = ({ blok }) => {
           </li>
           <li className="hidden md:block">
             <div className="hover-container">
-              <a href="/Artikelen" className="hover:text-rood">
+              <a href="/Artikelen" className="hover:text-red">
                 Artikelen
               </a>
               <div className="hover-line"></div>
@@ -78,7 +78,7 @@ const Header = ({ blok }) => {
           </li>
           <li className="hidden md:block">
             <div className="hover-container">
-              <a href="/Artikelen" className="hover:text-rood">
+              <a href="/Artikelen" className="hover:text-red">
                 Evenementen
               </a>
               <div className="hover-line"></div>
@@ -96,7 +96,7 @@ const Header = ({ blok }) => {
             />
 
             {/* Aboneer knop */}
-            <button className=" hidden sm:block text-white bg-rood px-4 py-1 mt-12 ml-6 font-semibold">
+            <button className=" hidden sm:block text-white bg-red px-4 py-1 mt-12 ml-6 text-label-desktop font-semibold">
               Aboneer
             </button>
 
@@ -120,14 +120,14 @@ const Header = ({ blok }) => {
 
       {/* Mobile Menu */}
       {isMobileMenuVisible && (
-        <div className="sm:hidden font-standaard font-normal w-full bg-zwart text-white p-4 z-2">
+        <div className="sm:hidden w-full bg-black text-white p-4 z-2">
           <ul className="flex flex-col">
-            <li className="py-2">
+            <li className=" font-sans  py-2">
               <a href="/Home">Home</a>
             </li>
             <li className="py-2">
               <button
-                className="hover:text-rood flex justify-center"
+                className="font-sans hover:text-red flex justify-center"
                 onClick={toggleNewsMenu} // Toggle het menu bij klikken
               >
                 Nieuws
@@ -151,29 +151,29 @@ const Header = ({ blok }) => {
 
             {/* Uitklapmenu nieuws */}
             {isNewsMenuVisible && ( //wordt getoont als isMenuVisible true is
-              <div className="sm:h-72 bg-zwart">
+              <div className="sm:h-72 bg-black">
                 <div className="sm:mx-24 mx-4 flex flex-col sm:flex-row justify-between z-3">
                   {/* Innovaties list */}
-                  <ul className="">
+                  <ul className="font-sans text-info-mobile ">
                     <div className="hover-container">
                       <li className="mt-12 py-2">
-                        <a className="text-rood">Innovaties</a>
+                        <a className="text-red ">Innovaties</a>
                         <div className="hover-line"></div>
                       </li>
                     </div>
                     <li className="py-2">
-                      <a className="text-wit hover:text-rood">AI</a>
+                      <a className="text-white hover:text-red">AI</a>
                     </li>
                     <li className="py-2">
-                      <a className="text-wit hover:text-rood">AR & VR</a>
+                      <a className="text-white hover:text-red">AR & VR</a>
                     </li>
                     <li className="py-2">
-                      <a className="text-wit hover:text-rood">
+                      <a className="text-white hover:text-red">
                         Tech Doorbraken
                       </a>
                     </li>
                     <li className="py-2">
-                      <a className="text-wit hover:text-rood">
+                      <a className="text-white hover:text-red">
                         Mobiele Innovaties
                       </a>
                     </li>
@@ -183,27 +183,27 @@ const Header = ({ blok }) => {
                   <ul className="">
                     <div className="hover-container">
                       <li className="mt-12 py-2">
-                        <a className="text-rood">Social Media</a>
+                        <a className="text-red">Social Media</a>
                         <div className="hover-line"></div>
                       </li>
                     </div>
                     <li className="py-2">
-                      <a href="" className="text-wit hover:text-rood">
+                      <a href="" className="text-white hover:text-red">
                         Content Creatie
                       </a>
                     </li>
                     <li className="py-2">
-                      <a href="" className="text-wit hover:text-rood">
+                      <a href="" className="text-white hover:text-red">
                         Platform Updates
                       </a>
                     </li>
                     <li className="py-2">
-                      <a href="" className="text-wit hover:text-rood">
+                      <a href="" className="text-white hover:text-red">
                         Influencer Marketing
                       </a>
                     </li>
                     <li className="py-2">
-                      <a href="" className="text-wit hover:text-rood">
+                      <a href="" className="text-white hover:text-red">
                         Social Advertising
                       </a>
                     </li>
@@ -213,24 +213,24 @@ const Header = ({ blok }) => {
                   <ul className="">
                     <div className="hover-container">
                       <li className="mt-12 py-2">
-                        <a href="" className="text-rood">
+                        <a href="" className="text-red">
                           SEO
                         </a>
                         <div className="hover-line"></div>
                       </li>
                     </div>
                     <li className="py-2">
-                      <a href="" className="text-wit hover:text-rood">
+                      <a href="" className="text-white hover:text-red">
                         Content Marketing
                       </a>
                     </li>
                     <li className="py-2">
-                      <a href="" className="text-wit hover:text-rood">
+                      <a href="" className="text-white hover:text-red">
                         Storytelling
                       </a>
                     </li>
                     <li className="py-2">
-                      <a href="" className="text-wit hover:text-rood">
+                      <a href="" className="text-white hover:text-red">
                         Copywriting
                       </a>
                     </li>
@@ -240,24 +240,24 @@ const Header = ({ blok }) => {
                   <ul className="">
                     <div className="hover-container">
                       <li className="mt-12 py-2">
-                        <a href="" className="text-rood">
+                        <a href="" className="text-red">
                           Big data
                         </a>
                         <div className="hover-line"></div>
                       </li>
                     </div>
                     <li className="py-2">
-                      <a href="" className="text-wit hover:text-rood">
+                      <a href="" className="text-white hover:text-red">
                         Web Analystics
                       </a>
                     </li>
                     <li className="py-2">
-                      <a href="" className="text-wit hover:text-rood">
+                      <a href="" className="text-white hover:text-red">
                         Performance Metrics
                       </a>
                     </li>
                     <li className="py-2">
-                      <a href="" className="text-wit hover:text-rood">
+                      <a href="" className="text-white hover:text-red">
                         Klantinzichten
                       </a>
                     </li>
@@ -267,24 +267,24 @@ const Header = ({ blok }) => {
                   <ul className="">
                     <div className="hover-container">
                       <li className="mt-12 py-2">
-                        <a href="" className="text-rood">
+                        <a href="" className="text-red">
                           Creative Concepten
                         </a>
                         <div className="hover-line"></div>
                       </li>
                     </div>
                     <li className="py-2">
-                      <a href="" className="text-wit hover:text-rood">
+                      <a href="" className="text-white hover:text-red">
                         Succesverhalen
                       </a>
                     </li>
                     <li className="py-2">
-                      <a href="" className="text-wit hover:text-rood">
+                      <a href="" className="text-white hover:text-red">
                         Video & TV
                       </a>
                     </li>
                     <li className="py-2">
-                      <a href="" className="text-wit hover:text-rood">
+                      <a href="" className="text-white hover:text-red">
                         Buitenreclame
                       </a>
                     </li>
@@ -293,22 +293,22 @@ const Header = ({ blok }) => {
               </div>
             )}
 
-            <li className="py-2">
+            <li className="py-2 font-sans ">
               <a href="/Interviews">Interviews</a>
             </li>
-            <li className="py-2">
+            <li className="py-2 font-sans ">
               <a href="/Artikelen">Artikelen</a>
             </li>
-            <li className="py-2">
+            <li className="py-2 font-sans ">
               <a href="/Artikelen">Evenementen</a>
             </li>
-            <li className="py-2">
+            <li className="py-2 font-sans">
               <a href="/Artikelen">Tip de redactie</a>
             </li>
 
             {/* Aboneer knop */}
             <div className="flex flex-row justify-between">
-              <button className=" w-32 text-white bg-rood px-2 py-1 font-semibold z-3">
+              <button className=" w-32 text-white bg-red px-2 py-1 font-semibold z-3">
                 Aboneer
               </button>
 
@@ -324,27 +324,27 @@ const Header = ({ blok }) => {
       )}
       {/* Uitklapmenu nieuws */}
       {isNewsMenuVisible && ( //wordt getoont als isMenuVisible true is
-        <div className="hidden  sm:block sm:h-72 bg-zwart">
+        <div className="hidden  sm:block sm:h-72 bg-black">
           <div className="sm:mx-24 mx-4 flex flex-col sm:flex-row justify-between z-3">
             {/* Innovaties list */}
             <ul className="">
               <div className="hover-container">
-                <li className="mt-12 sm:mt-4 mt-1 py-2">
-                  <a className="text-rood">Innovaties</a>
+                <li className="mt-12 py-2">
+                  <a className="text-red">Innovaties</a>
                   <div className="hover-line"></div>
                 </li>
               </div>
               <li className="py-2">
-                <a className="text-wit hover:text-rood">AI</a>
+                <a className="text-white hover:text-red">AI</a>
               </li>
               <li className="py-2">
-                <a className="text-wit hover:text-rood">AR & VR</a>
+                <a className="text-white hover:text-red">AR & VR</a>
               </li>
               <li className="py-2">
-                <a className="text-wit hover:text-rood">Tech Doorbraken</a>
+                <a className="text-white hover:text-red">Tech Doorbraken</a>
               </li>
               <li className="py-2">
-                <a className="text-wit hover:text-rood">Mobiele Innovaties</a>
+                <a className="text-white hover:text-red">Mobiele Innovaties</a>
               </li>
             </ul>
 
@@ -352,27 +352,27 @@ const Header = ({ blok }) => {
             <ul className="">
               <div className="hover-container">
                 <li className="mt-12 py-2">
-                  <a className="text-rood">Social Media</a>
+                  <a className="text-red">Social Media</a>
                   <div className="hover-line"></div>
                 </li>
               </div>
               <li className="py-2">
-                <a href="" className="text-wit hover:text-rood">
+                <a href="" className="text-white hover:text-red">
                   Content Creatie
                 </a>
               </li>
               <li className="py-2">
-                <a href="" className="text-wit hover:text-rood">
+                <a href="" className="text-white hover:text-red">
                   Platform Updates
                 </a>
               </li>
               <li className="py-2">
-                <a href="" className="text-wit hover:text-rood">
+                <a href="" className="text-white hover:text-red">
                   Influencer Marketing
                 </a>
               </li>
               <li className="py-2">
-                <a href="" className="text-wit hover:text-rood">
+                <a href="" className="text-white hover:text-red">
                   Social Advertising
                 </a>
               </li>
@@ -382,24 +382,24 @@ const Header = ({ blok }) => {
             <ul className="">
               <div className="hover-container">
                 <li className="mt-12 py-2">
-                  <a href="" className="text-rood">
+                  <a href="" className="text-red">
                     SEO
                   </a>
                   <div className="hover-line"></div>
                 </li>
               </div>
               <li className="py-2">
-                <a href="" className="text-wit hover:text-rood">
+                <a href="" className="text-white hover:text-red">
                   Content Marketing
                 </a>
               </li>
               <li className="py-2">
-                <a href="" className="text-wit hover:text-rood">
+                <a href="" className="text-white hover:text-red">
                   Storytelling
                 </a>
               </li>
               <li className="py-2">
-                <a href="" className="text-wit hover:text-rood">
+                <a href="" className="text-white hover:text-red">
                   Copywriting
                 </a>
               </li>
@@ -409,24 +409,24 @@ const Header = ({ blok }) => {
             <ul className="">
               <div className="hover-container">
                 <li className="mt-12 py-2">
-                  <a href="" className="text-rood">
+                  <a href="" className="text-red">
                     Big data
                   </a>
                   <div className="hover-line"></div>
                 </li>
               </div>
               <li className="py-2">
-                <a href="" className="text-wit hover:text-rood">
+                <a href="" className="text-white hover:text-red">
                   Web Analystics
                 </a>
               </li>
               <li className="py-2">
-                <a href="" className="text-wit hover:text-rood">
+                <a href="" className="text-white hover:text-red">
                   Performance Metrics
                 </a>
               </li>
               <li className="py-2">
-                <a href="" className="text-wit hover:text-rood">
+                <a href="" className="text-white hover:text-red">
                   Klantinzichten
                 </a>
               </li>
@@ -436,24 +436,24 @@ const Header = ({ blok }) => {
             <ul className="">
               <div className="hover-container">
                 <li className="mt-12 py-2">
-                  <a href="" className="text-rood">
+                  <a href="" className="text-red">
                     Creative Concepten
                   </a>
                   <div className="hover-line"></div>
                 </li>
               </div>
               <li className="py-2">
-                <a href="" className="text-wit hover:text-rood">
+                <a href="" className="text-white hover:text-red">
                   Succesverhalen
                 </a>
               </li>
               <li className="py-2">
-                <a href="" className="text-wit hover:text-rood">
+                <a href="" className="text-white hover:text-red">
                   Video & TV
                 </a>
               </li>
               <li className="py-2">
-                <a href="" className="text-wit hover:text-rood">
+                <a href="" className="text-white hover:text-red">
                   Buitenreclame
                 </a>
               </li>
