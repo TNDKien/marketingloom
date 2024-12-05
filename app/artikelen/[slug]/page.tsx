@@ -1,5 +1,4 @@
 import { getStoryblokApi } from "@storyblok/react";
-import { render } from "storyblok-rich-text-react-renderer";
 import Artikel from "@components/Artikel/Artikel";
 
 export async function getData(slug: string) {
