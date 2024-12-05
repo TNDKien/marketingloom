@@ -2,12 +2,11 @@ import { storyblokEditable } from "@storyblok/react/rsc";
 
 const Nieuwsbrief = ({ blok }) => {
   return (
-    <div className="flex w-full bg-silver bg-opacity-10" {...storyblokEditable(blok)}>
+    <div className="flex w-full bg-silver bg-opacity-10 font-sans" {...storyblokEditable(blok)}>
 
 
-  {/* Linkerkant */}
-  
-<div className="flex-1 relative flex items-center justify-left">
+{/* Linkerkant */}
+<div className="flex-1 relative">
   {/* Afbeelding */}
   <img 
     src={blok.leftimage.filename} 
@@ -16,16 +15,17 @@ const Nieuwsbrief = ({ blok }) => {
   />
   
   {/* Tekst die over de afbeelding komt */}
-  <div className="absolute text-xl text-white font-serif p-5">
+  <div className="absolute inset-0 flex items-center pl-16 text-xl text-white">
     {blok.tekstlinks}
   </div>
 </div>
 
 
 
+
   {/* Rechterkant */}
-  <div className="flex-[2] items-center justify-center p-6 text-black">
-    <h2 className="text-h2-desktop font-semibold mb-4 items-center justify-center">{blok.titel}</h2>
+  <div className="flex-[3] items-center justify-center p-6 text-black">
+    <h2 className="flex text-h2-desktop font-semibold mb-4 items-center justify-center">{blok.titel}</h2>
     <div className="flex space-x-4 mb-4 items-center justify-center">
       <label className="flex items-center space-x-2">
                 <span>{blok.checkbox1label}</span>
@@ -36,14 +36,14 @@ const Nieuwsbrief = ({ blok }) => {
         <input type="checkbox" className="form-checkbox" />
       </label>
     </div>
-    <div className="flex text-label-desktop">
+    <div className="flex text-label-desktop justify-center">
 <input 
   type="email" 
-  className="border-[0.5px] border-silver p-2 w-full" 
-  placeholder={blok.inputPlaceholder} 
+  className="border-[0.5px] border-silver p-2 w-2/6 items-center justify-center" 
+  placeholder={blok.inputplaceholder} 
 />
 
-      <button className="bg-red text-white p-2">
+      <button className="bg-red text-white px-6 py-4">
         {blok.buttontekst}
       </button>
     </div>

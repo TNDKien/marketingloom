@@ -33,9 +33,11 @@ import ArtikelTeaser from "./ArtikelTeaser/ArtikelTeaser";
 import Eyecatcher from "./Eyecatcher/Eyecatcher";
 import Artikel_Preview from "./Artikel_Preview/Artikel_Preview";
 import Nieuws_Teaser from "./Nieuws_Teaser/Nieuws_Teaser";
+import Button from "./Button/Button";
 
 const components = {
   page: Page,
+  button: Button,
   artikel_preview: Artikel_Preview,
   template: Template,
   artikel: Artikel,
