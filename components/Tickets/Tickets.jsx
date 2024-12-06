@@ -1,14 +1,22 @@
 import { storyblokEditable } from "@storyblok/react/rsc";
 
-const Tickets = ({ blok }) => (
-  <div className=" bg-blue-500 text-white" {...storyblokEditable(blok)}>
-    <h1 className=" text-4xl font-bold">{blok.Titel}</h1>
-    <img
-      className="w-1/2"
-      src={blok.Afbeelding.filename}
-      alt={blok.Afbeelding.alt}
-    />
-  </div>
-);
+const Tickets = ({ blok }) => {
+  return (
+    <div {...storyblokEditable(blok)} className="flex flex-col gap-6 p-4">
+      {/* Ticket 1 */}
+      <div className="flex flex-row items-center gap-4">
+        <p className="text-lg font-bold text-black">
+          {blok.ticketname || "Geen naam gevonden"}
+        </p>
+        <p className="text-lg text-gray-700">
+          {blok.ticketprice || "Geen prijs gevonden"}
+        </p>
+        <button className="bg-red-500 text-white bg-red px-4 py-2 rounded">
+          {blok.ticketbutton || "Geen knop"}
+        </button>
+      </div>
+    </div>
+  );
+};
 
 export default Tickets;
