@@ -45,11 +45,11 @@ const Artikel_Preview = ({ blok }) => {
 
   return (
     <div
-      className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6 sm:p-12 lg:p-24 text-black"
+      className="hidden sm:flex grid grid-cols-1 md:grid-cols-2 gap-8 py-8 px-4 sm:px-24 text-black"
       {...storyblokEditable(blok)}
     >
       {/* Interviews Sectie */}
-      <div>
+      <div className="w-1/2">
         <h2 className="text-h2-desktop mb-4">Interviews</h2>
         {interviews.map((item, index) => (
           <div
@@ -72,7 +72,7 @@ const Artikel_Preview = ({ blok }) => {
       </div>
 
       {/* Evenementen & Webinars Sectie */}
-      <div>
+      <div className="w-1/2">
         <h2 className="text-h2-desktop mb-4">Evenementen & Webinars</h2>
         {evenementen.map((item, index) => (
           <div
