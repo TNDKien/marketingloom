@@ -1,5 +1,6 @@
 import { render } from "storyblok-rich-text-react-renderer";
 import { storyblokEditable } from "@storyblok/react/rsc";
+import Looms from "../Looms/Looms";
 
 const Artikel = ({ blok }) => {
   // Function to render labels with appropriate separators
@@ -22,27 +23,11 @@ const Artikel = ({ blok }) => {
 
   return (
     <article
-      className="relative flex flex-col justify-center items-center pt-4 lg:pt-8 font-sans"
+      className="relative flex flex-col justify-center items-center pt-4 lg:pt-8 font-sans overflow-hidden"
       {...storyblokEditable(blok)}
     >
       {/* Line Groups as Background Elements */}
-      <div className="-z-10 w-full hidden lg:block">
-        <img
-          className="absolute top-[25vh] left-0 transform -translate-y-1/4 -translate-x-1/2 w-[300px] opacity-20"
-          src={blok.looms.filename}
-          alt={blok.looms.alt}
-        />
-        {/* <img
-          className="absolute top-[55%] right-0 transform scale-x-[-1] translate-y-1/4 translate-x-1/2 w-[300px] opacity-20"
-          src={blok.looms.filename}
-          alt={blok.looms.alt}
-        /> */}
-        <img
-          className="absolute bottom-[25vh] left-0 transform translate-y-1/4 -translate-x-1/2 w-[300px] opacity-20"
-          src={blok.looms.filename}
-          alt={blok.looms.alt}
-        />
-      </div>
+      <Looms />
       {/* Header Section */}
       <header className="container px-4 lg:px-0 max-w-[800px] text-center">
         <h1 className="lg:text-3xl text-2xl mb-6 font-semibold text-black">
@@ -50,10 +35,10 @@ const Artikel = ({ blok }) => {
         </h1>
         <p className="pb-8 text-lg font-light text-black">{blok.subtitel}</p>
       </header>
-      {/* Main Image  */}
+      {/* Main Image */}
       <div className="w-full overflow-hidden flex justify-center">
         <img
-          className="w-full h-auto"
+          className="w-full h-auto max-h-[800px] object-cover"
           src={blok.afbeelding.filename}
           alt={blok.afbeelding.alt}
         />
