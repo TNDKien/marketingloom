@@ -11,12 +11,12 @@ const SearchBlock = ({ blok, onSearch }) => {
   };
 
   return (
-    <div className="mt-14 flex justify-end">
-      <div className="w-1/4 flex justify-between border-red border-2 h-12 items-center rounded-lg overflow-hidden">
+    <div className="mt-14 flex justify-end sm:flex hidden">
+      <div className="w-1/4 flex justify-between border-red border-2 h-12 items-center overflow-hidden">
         {/* Zoekveld */}
         <input
           type="text"
-          className="ml-6 flex-grow text-label-desktop font-semibold focus:outline-none placeholder-black"
+          className="ml-6 flex-grow sm:text-label-desktop text-h1-mobile font-semibold focus:outline-none placeholder-black"
           placeholder="Zoek interview..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)} // Houdt de waarde bij
@@ -39,14 +39,14 @@ const SearchBlock = ({ blok, onSearch }) => {
 };
 
 const Artikel_Hero = ({ blok }) => (
-  <div className="z-2 mx-24" {...storyblokEditable(blok)}>
+  <div className="z-2 sm:mx-24 mx-4" {...storyblokEditable(blok)}>
     {/* Titel */}
-    <div className="font-sans text-h1-desktop text-center pt-6">
+    <div className="font-sans sm:h1-desktop text-h1-mobile font-semibold text-center pt-6">
       {blok.titel}
     </div>
 
     {/* Inleiding */}
-    <div className="text-p-large-desktop text-center mt-8">
+    <div className="sm:text-p-large-desktop p-large-mobile text-center mt-8">
       {blok.inleiding}
     </div>
 
@@ -57,7 +57,7 @@ const Artikel_Hero = ({ blok }) => (
     />
 
     {/* Artikel Content */}
-    <div className="flex mt-6">
+    <div className="flex sm:flex-row flex-col mt-6">
       <div>
         <img
           className=""
@@ -66,21 +66,21 @@ const Artikel_Hero = ({ blok }) => (
         />
       </div>
 
-      <div className="ml-8">
+      <div className="sm:ml-8 ml-0 mt-4 sm:mt-0">
         <div className="w-fit text-label-desktop font-regular text-white bg-red px-4 py-1 ">
           {blok.categorie}
         </div>
         <div className="text-h3-desktop font-semibold mt-4">{blok.kopje}</div>
-        <div className="text-label-desktop text-regular mt-2 text-silver">
+        <div className="text-label-desktop text-label-mobile text-regular sm:mt-2 mt-0 text-silver">
           {blok.kopje_inleiding}
         </div>
         <div className="text-paragraph font-serif mt-6">{blok.tekst}</div>
 
-        <div className="flex justify-between text-red width-2 mt-6">
-          <div className="text-label-desktop font-regular mt-8">
+        <div className="flex justify-between text-red width-2 mt-6 pb-6">
+          <div className="sm:text-label-desktop text-info-mobile font-regular">
             {blok.datum}
           </div>
-          <div className="text-label-desktop font-regular mt-8">
+          <div className="sm:text-label-desktop text-info-mobile font-regular">
             {blok.leestijd}
           </div>
         </div>
