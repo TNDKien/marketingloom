@@ -2,7 +2,7 @@ import { storyblokEditable } from "@storyblok/react/rsc";
 
 const Eyecatcher = ({ blok }) => (
   <div
-    className="p-6 max-w-xl mx-auto font-sans text-black"
+    className="p-6 w-full sm:w-6/12 mx-left font-sans text-black"
     {...storyblokEditable(blok)}
   >
     {/* Afbeelding */}

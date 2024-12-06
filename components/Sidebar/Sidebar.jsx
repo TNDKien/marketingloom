@@ -10,7 +10,7 @@ const Sidebar = ({ blok }) => {
       : blok.artikelen_sidebar_meestgelezen;
 
   return (
-    <div className="flex justify-end w-full bg-gray-100">
+    <div className="flex justify-end max-w-4/12 bg-gray-100">
       {/* Sidebar */}
       <div
         className="w-full sm:w-[400px] bg-black sm:bg-white text-white sm:text-black"
