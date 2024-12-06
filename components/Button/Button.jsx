@@ -7,7 +7,7 @@ const Button = ({ blok }) => (
     className="fixed top-0 left-1/2 transform -translate-x-1/2 mt-4"
     {...storyblokEditable(blok)}
   >
-    <button className="group relative flex items-center text-sm font-bold text-black">
+    <button className="group relative flex items-center text-sm font-bold font-sans text-black">
       <span className="relative z-10">{blok.tekst || "Lees Meer"}</span>
       <span className="ml-2 transition-transform duration-300 ease-out group-hover:-translate-x-2 opacity-100 group-hover:opacity-0">
         →
