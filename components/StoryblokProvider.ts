@@ -34,6 +34,8 @@ import Eyecatcher from "./Eyecatcher/Eyecatcher";
 import Artikel_Preview from "./Artikel_Preview/Artikel_Preview";
 import Nieuws_Teaser from "./Nieuws_Teaser/Nieuws_Teaser";
 import Sticky_Ad from "./Sticky_Ad/Sticky_Ad";
+import Button from "./Button/Button";
+
 
 const components = {
   page: Page,
