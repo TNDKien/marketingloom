@@ -15,9 +15,10 @@ import Artikel_Hero from "./Artikel_Hero/Artikel_Hero";
 import Artikel_XS from "./Artikel_XS/Artikel_XS";
 import Contact from "./Contact/Contact";
 import Evenement from "./Evenement/Evenement";
-import Event_Container from "./Event_Container/Event_Container";
-import Event_Hero from "./Event_Hero/Event_Hero";
-import Event_Info from "./Event_Info/Event_Info";
+import EvenementContainer from "./EvenementContainer/EvenementContainer";
+import EventHero from "./EventHero/EventHero";
+import EventInfo from "./EventInfo/EventInfo";
+import EvenementTeaser from "./EvenementTeaser/EvenementTeaser";
 import Interview_Container from "./Interview_Container/Interview_Container";
 import Nieuwsbrief from "./Nieuwsbrief/Nieuwsbrief";
 import Pagina_Hero from "./Pagina_Hero/Pagina_Hero";
@@ -50,9 +51,10 @@ const components = {
   artikel_xs: Artikel_XS,
   contact: Contact,
   evenement: Evenement,
-  event_container: Event_Container,
-  event_hero: Event_Hero,
-  event_info: Event_Info,
+  evenementcontainer: EvenementContainer,
+  evenementteaser: EvenementTeaser,
+  eventhero: EventHero,
+  eventinfo: EventInfo,
   eyecatcher: Eyecatcher,
   interview_container: Interview_Container,
   nieuwsbrief: Nieuwsbrief,

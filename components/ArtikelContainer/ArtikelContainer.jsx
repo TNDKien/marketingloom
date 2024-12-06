@@ -4,7 +4,6 @@ import ArtikelTeaser from "../ArtikelTeaser/ArtikelTeaser";
 
 const ArtikelContainer = ({ blok }) => {
   const [artikelen, setArtikelen] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchArtikelen = async () => {
