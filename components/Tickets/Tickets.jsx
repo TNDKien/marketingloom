@@ -11,7 +11,7 @@ const Tickets = ({ blok }) => {
         </p>
 
         {/* Prijs */}
-        <p className="text-lg text-gray-700 flex-1 text-center">
+        <p className="text-lg text-black flex-1 text-center">
           {blok.ticketprice || "Geen prijs gevonden"}
         </p>
 
