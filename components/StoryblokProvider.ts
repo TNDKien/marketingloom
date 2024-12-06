@@ -33,8 +33,7 @@ import ArtikelTeaser from "./ArtikelTeaser/ArtikelTeaser";
 import Eyecatcher from "./Eyecatcher/Eyecatcher";
 import Artikel_Preview from "./Artikel_Preview/Artikel_Preview";
 import Nieuws_Teaser from "./Nieuws_Teaser/Nieuws_Teaser";
-import Blok_Container from "./Blok_Container/Blok_Container";
-import Button from "./Button/Button";
+import Sticky_Ad from "./Sticky_Ad/Sticky_Ad";
 
 const components = {
   page: Page,
@@ -66,7 +65,7 @@ const components = {
   populaireartikelen: PopulaireArtikelen,
   artikelteaser: ArtikelTeaser,
   nieuws_teaser: Nieuws_Teaser,
-  blok_container: Blok_Container,
+  sticky_ad: Sticky_Ad,
 };
 
 storyblokInit({
