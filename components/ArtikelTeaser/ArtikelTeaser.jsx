@@ -4,7 +4,7 @@ import { storyblokEditable } from "@storyblok/react/rsc";
 const ArtikelTeaser = ({ blok }) => {
   return (
     <div
-      className="sm:mx-24 mx-4  w-3/12 flex flex-col"
+      className="sm:mx-24 mx-4  sm:w-3/12  w-auto flex flex-col"
       {...storyblokEditable(blok)}
     >
       {/* Artikel Content */}
