@@ -35,6 +35,7 @@ import Artikel_Preview from "./Artikel_Preview/Artikel_Preview";
 import Nieuws_Teaser from "./Nieuws_Teaser/Nieuws_Teaser";
 import Sticky_Ad from "./Sticky_Ad/Sticky_Ad";
 import Button from "./Button/Button";
+import Nieuws_Topartikel from "./Nieuws_Topartikel/Nieuws_Topartikel";
 
 
 const components = {
@@ -68,6 +69,7 @@ const components = {
   artikelteaser: ArtikelTeaser,
   nieuws_teaser: Nieuws_Teaser,
   sticky_ad: Sticky_Ad,
+  nieuws_topartikel: Nieuws_Topartikel,
 };
 
 storyblokInit({
