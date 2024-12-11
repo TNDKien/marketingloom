@@ -42,7 +42,10 @@ const PopulaireArtikelen = ({ blok }) => {
   }, [blok.artikelen]);
 
   return (
-    <section className="hidden sm:block p-6 lg:px-24" {...storyblokEditable(blok)}>
+    <section
+      className="hidden sm:block p-6 lg:px-24"
+      {...storyblokEditable(blok)}
+    >
       {/* Render the headline */}
       <p className="text-h2-desktop font-bold mb-6">
         {blok.headline || "Populaire Artikelen"}

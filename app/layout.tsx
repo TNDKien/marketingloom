@@ -1,6 +1,7 @@
 import "./globals.css";
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import StoryblokProvider from "../components/StoryblokProvider";
+import Header from "../components/Header/Header";
 
 storyblokInit({
   accessToken: process.env.NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN,
@@ -17,7 +18,10 @@ export default async function RootLayout({
   return (
     <StoryblokProvider>
       <html>
-        <body>{children}</body>
+        <body>
+          <Header />
+          <main className="mt-[150px]">{children}</main>
+        </body>
       </html>
     </StoryblokProvider>
   );
