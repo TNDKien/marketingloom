@@ -1,34 +1,33 @@
 import { storyblokEditable } from "@storyblok/react/rsc";
-import { useState } from "react"; //useState kijkt in welke staat het is
+import { useState } from "react";
 import "./HoverEffect.css";
 
 const Header = ({ blok }) => {
-  const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false); // Mobile menu
-  const [isNewsMenuVisible, setIsNewsMenuVisible] = useState(false); // Nieuws submenu
+  const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false);
+  const [isNewsMenuVisible, setIsNewsMenuVisible] = useState(false);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuVisible((prev) => !prev); // Toggle mobiele menu
+    setIsMobileMenuVisible((prev) => !prev);
   };
 
   const toggleNewsMenu = () => {
-    setIsNewsMenuVisible((prev) => !prev); // Toggle nieuws submenu
+    setIsNewsMenuVisible((prev) => !prev);
   };
 
   return (
-    <div className="z-10 h-28 mt-0 " {...storyblokEditable(blok)}>
+    <div
+      className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md"
+      {...storyblokEditable(blok)}
+    >
       {/* nav bar */}
-      <nav className="flex ml-4 mr-4 justify-between pb-8 sm:ml-24 sm:mr-24">
+      <nav className="flex justify-between items-center py-4 px-4 sm:px-24">
         <div className="w-3/12">
-          <a href="/">
-            <img
-              className="mt-8 h-12 mt-8 w-auto h-12"
-              src={blok.logo.filename}
-              alt={blok.logo.alt || "Logo"}
-            />
+          <a href="/Home" className="hover:text-red">
+            <img src="/Logo_Loom.svg" alt="Logo" className="sm:w-3/12 W-100%" />
           </a>
         </div>
-        <ul className="flex flex-wrap mt-12 w-6/12 justify-between text-black text-p-large-desktop">
-          <li className="hidden md:block">
+        <ul className="hidden md:flex w-6/12 justify-between text-black text-p-large-desktop">
+          <li>
             <div className="hover-container">
               <a href="/Home" className="hover:text-red">
                 Home
@@ -36,19 +35,18 @@ const Header = ({ blok }) => {
               <div className="hover-line"></div>
             </div>
           </li>
-          <li className="flex hidden md:block">
+          <li>
             <button
-              className="hover:text-red flex justify-center"
-              onClick={toggleNewsMenu} // Toggle het menu bij klikken
+              className="hover:text-red flex items-center"
+              onClick={toggleNewsMenu}
             >
               Nieuws
-              {/* SVG voor pijl die naar beneden wijst */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className={`w-6 h-6 transform transition-transform duration-300 ${
-                  isNewsMenuVisible ? "scale-y-[-1]" : ""
+                className={`w-6 h-6 ml-1 transform transition-transform duration-300 ${
+                  isNewsMenuVisible ? "rotate-180" : ""
                 }`}
               >
                 <path
@@ -59,8 +57,7 @@ const Header = ({ blok }) => {
               </svg>
             </button>
           </li>
-
-          <li className="hidden md:block">
+          <li>
             <div className="hover-container">
               <a href="/Interviews" className="hover:text-red">
                 Interviews
@@ -68,7 +65,7 @@ const Header = ({ blok }) => {
               <div className="hover-line"></div>
             </div>
           </li>
-          <li className="hidden md:block">
+          <li>
             <div className="hover-container">
               <a href="/Artikelen" className="hover:text-red">
                 Artikelen
@@ -76,9 +73,9 @@ const Header = ({ blok }) => {
               <div className="hover-line"></div>
             </div>
           </li>
-          <li className="hidden md:block">
+          <li>
             <div className="hover-container">
-              <a href="/Artikelen" className="hover:text-red">
+              <a href="/Evenementen" className="hover:text-red">
                 Evenementen
               </a>
               <div className="hover-line"></div>
@@ -86,58 +83,49 @@ const Header = ({ blok }) => {
           </li>
         </ul>
 
-        {/* Zoek afbeelding */}
-        <div className="w-3/12">
-          <div className="flex justify-end">
-            <img
-              className="mt-12 "
-              src={blok.zoek.filename}
-              alt={blok.zoek.alt || "Zoek"}
-            />
-
-            {/* Aboneer knop */}
-            <button className=" hidden sm:block text-white bg-red px-4 py-1 mt-12 ml-6 text-label-desktop font-semibold">
-              Aboneer
-            </button>
-
-            {/* Kleurmodus knop */}
-            <img
-              className="hidden sm:block mt-12 ml-6"
-              src={blok.modus.filename}
-              alt={blok.modus.alt || "Kleurmodus knop"}
-            />
-
-            {/* Hamburger menu komt tevoorschijnt als mobile device is */}
-            <img
-              className="block sm:hidden mt-12 ml-6"
-              src={blok.menu.filename}
-              alt={blok.menu.alt || "Hamburger menu"}
-              onClick={toggleMobileMenu}
-            />
-          </div>
+        {/* Zoek afbeelding en knoppen */}
+        <div className="flex items-center">
+          <img
+            className="hidden sm:block"
+            src={blok.zoek.filename}
+            alt={blok.zoek.alt || "Zoek"}
+          />
+          <button className="hidden sm:block text-white bg-red px-4 py-1 ml-6 text-label-desktop font-semibold">
+            Aboneer
+          </button>
+          <img
+            className="hidden sm:block ml-6"
+            src={blok.modus.filename}
+            alt={blok.modus.alt || "Kleurmodus knop"}
+          />
+          <img
+            className="block sm:hidden ml-6 cursor-pointer"
+            src={blok.menu.filename}
+            alt={blok.menu.alt || "Hamburger menu"}
+            onClick={toggleMobileMenu}
+          />
         </div>
       </nav>
 
       {/* Mobile Menu */}
       {isMobileMenuVisible && (
-        <div className="sm:hidden w-full bg-black text-white p-4 z-2">
+        <div className="sm:hidden bg-black text-white p-4">
           <ul className="flex flex-col">
-            <li className=" font-sans  py-2">
+            <li>
               <a href="/Home">Home</a>
             </li>
-            <li className="py-2">
+            <li>
               <button
-                className="font-sans hover:text-red flex justify-center"
-                onClick={toggleNewsMenu} // Toggle het menu bij klikken
+                className="flex justify-between items-center"
+                onClick={toggleNewsMenu}
               >
                 Nieuws
-                {/* SVG voor pijl die naar beneden wijst */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                   className={`w-6 h-6 transform transition-transform duration-300 ${
-                    isNewsMenuVisible ? "scale-y-[-1]" : ""
+                    isNewsMenuVisible ? "rotate-180" : ""
                   }`}
                 >
                   <path
