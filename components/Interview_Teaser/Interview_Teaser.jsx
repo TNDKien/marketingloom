@@ -8,6 +8,9 @@ const InterviewTeaser = ({ interview, className, imgClassName }) => {
   }
 
   return (
+    <Link
+    href={`/${interview.slug}`}
+  >
     <article
       className={`relative bg-white overflow-hidden flex flex-col ${className}`}
       {...storyblokEditable(interview)}
@@ -70,6 +73,7 @@ const InterviewTeaser = ({ interview, className, imgClassName }) => {
           </p>
       </div>
     </article>
+    </Link>
   );
 };
 
