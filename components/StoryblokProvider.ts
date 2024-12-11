@@ -21,7 +21,6 @@ import EventHero from "./EventHero/EventHero";
 import EventInfo from "./EventInfo/EventInfo";
 import EvenementTeaser from "./EvenementTeaser/EvenementTeaser";
 import Interview from "./Interview/Interview";
-import Interview_Container from "./Interview_Container/Interview_Container";
 import Nieuwsbrief from "./Nieuwsbrief/Nieuwsbrief";
 import Pagina_Hero from "./Pagina_Hero/Pagina_Hero";
 import Sidebar from "./Sidebar/Sidebar";
@@ -41,6 +40,7 @@ import Button from "./Button/Button";
 import Blok_Container from "./Blok_Container/Blok_Container";
 import Line from "./line/Line";
 import Vertical_Ad from "./Vertical_Ad/Vertical_Ad";
+import InterviewContainer from "./InterviewContainer/InterviewContainer";
 
 const components = {
   page: Page,
@@ -63,7 +63,6 @@ const components = {
   eventinfo: EventInfo,
   eyecatcher: Eyecatcher,
   interview: Interview,
-  interview_container: Interview_Container,
   nieuwsbrief: Nieuwsbrief,
   pagina_hero: Pagina_Hero,
   sidebar: Sidebar,
@@ -79,6 +78,7 @@ const components = {
   sticky_ad: Sticky_Ad,
   blok_container: Blok_Container,
   line: Line,
+  interviewcontainer: InterviewContainer,
 };
 
 storyblokInit({

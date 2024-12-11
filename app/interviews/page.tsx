@@ -13,7 +13,7 @@ export async function getData(slug: string) {
   return response.data;
 }
 
-export default async function ArtikelenPage() {
+export default async function InterviewsPage() {
   const data = await getData("interviews/home");
 
   if (!data?.story) {

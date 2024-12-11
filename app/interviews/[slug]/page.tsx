@@ -11,7 +11,7 @@ export async function getData(slug: string) {
   return response.data.story;
 }
 
-export default async function ArticlePage({
+export default async function InterviewPage({
   params,
 }: {
   params: { slug: string };
