@@ -85,19 +85,12 @@ const Header = ({ blok }) => {
 
         {/* Zoek afbeelding en knoppen */}
         <div className="flex items-center">
-          <img
-            className="hidden sm:block"
-            src={blok.zoek.filename}
-            alt={blok.zoek.alt || "Zoek"}
-          />
+          <img src="/Zoek.svg" alt="Logo" className="hidden sm:block" />
           <button className="hidden sm:block text-white bg-red px-4 py-1 ml-6 text-label-desktop font-semibold">
             Aboneer
           </button>
-          <img
-            className="hidden sm:block ml-6"
-            src={blok.modus.filename}
-            alt={blok.modus.alt || "Kleurmodus knop"}
-          />
+          <img src="/Modus.svg" alt="Logo" className="hidden sm:block ml-6" />
+
           <img
             className="block sm:hidden ml-6 cursor-pointer"
             src={blok.menu.filename}
