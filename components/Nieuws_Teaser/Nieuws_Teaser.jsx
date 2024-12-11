@@ -1,7 +1,7 @@
 import { storyblokEditable } from "@storyblok/react/rsc";
 
 const Nieuws_Teaser = ({ blok }) => (
-  <div className="py-8" {...storyblokEditable(blok)}>
+  <div className="sm:hidden pt-8" {...storyblokEditable(blok)}>
     <div className="px-4 md:pl-16 md:w-8/12">
       {/* Flex-container met responsive layout */}
       <div className="flex flex-col md:flex-row gap-4 pb-6 items-stretch">

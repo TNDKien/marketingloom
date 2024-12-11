@@ -3,16 +3,33 @@ import { storyblokEditable } from "@storyblok/react/rsc";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faFacebookF, faLinkedinIn, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
+// SVG Pijltje
+const ArrowIcon = ({ isOpen }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="white"
+    className={`w-6 h-6 transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+  >
+    <path
+      fillRule="evenodd"
+      d="M12 16a1 1 0 01-.707-.293l-4-4a1 1 0 111.414-1.414L12 13.586l3.293-3.293a1 1 0 111.414 1.414l-4 4A1 1 0 0112 16z"
+      clipRule="evenodd"
+    />
+  </svg>
+);
+
 const CollapsibleSection = ({ title, items }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="block md:hidden">
       <p
-        className="text-red mb-4 pb-2 border-b border-white cursor-pointer"
+        className="text-red mb-4 pb-2 border-b border-white cursor-pointer flex justify-between items-center"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {title}
+        <span>{title}</span>
+        <ArrowIcon isOpen={isOpen} /> {/* Pijltje toegevoegd */}
       </p>
       {isOpen && (
         <ul className="font-light space-y-4">

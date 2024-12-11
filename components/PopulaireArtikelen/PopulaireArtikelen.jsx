@@ -42,7 +42,7 @@ const PopulaireArtikelen = ({ blok }) => {
   }, [blok.artikelen]);
 
   return (
-    <section className="p-6 lg:px-24" {...storyblokEditable(blok)}>
+    <section className="hidden sm:block p-6 lg:px-24" {...storyblokEditable(blok)}>
       {/* Render the headline */}
       <p className="text-h2-desktop font-bold mb-6">
         {blok.headline || "Populaire Artikelen"}
@@ -59,7 +59,7 @@ const PopulaireArtikelen = ({ blok }) => {
               article={artikel}
               className={
                 index === 0
-                  ? "lg:col-span-2 w-full h-96" // First article's container height
+                  ? "lg:col-span-2 w-full h-full" // First article's container height
                   : "lg:col-span-1 w-full h-48" // Others' container height
               }
               imgClassName={index === 0 ? "h-96" : "h-48"} // Dynamically adjust image height
