@@ -19,7 +19,7 @@ export default async function RootLayout({
     <StoryblokProvider>
       <html>
         <body>
-          <Header />
+          {/* <Header /> */}
           <main className="mt-[150px]">{children}</main>
         </body>
       </html>

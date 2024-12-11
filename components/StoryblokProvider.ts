@@ -20,6 +20,7 @@ import EvenementContainer from "./EvenementContainer/EvenementContainer";
 import EventHero from "./EventHero/EventHero";
 import EventInfo from "./EventInfo/EventInfo";
 import EvenementTeaser from "./EvenementTeaser/EvenementTeaser";
+import Interview from "./Interview/Interview";
 import Interview_Container from "./Interview_Container/Interview_Container";
 import Nieuwsbrief from "./Nieuwsbrief/Nieuwsbrief";
 import Pagina_Hero from "./Pagina_Hero/Pagina_Hero";
@@ -41,8 +42,6 @@ import Blok_Container from "./Blok_Container/Blok_Container";
 import Line from "./line/Line";
 import Vertical_Ad from "./Vertical_Ad/Vertical_Ad";
 
-
-
 const components = {
   page: Page,
   mobile_ad: Mobile_Ad,
@@ -63,6 +62,7 @@ const components = {
   eventhero: EventHero,
   eventinfo: EventInfo,
   eyecatcher: Eyecatcher,
+  interview: Interview,
   interview_container: Interview_Container,
   nieuwsbrief: Nieuwsbrief,
   pagina_hero: Pagina_Hero,
@@ -82,8 +82,6 @@ const components = {
 };
 
 storyblokInit({
-
-  
   accessToken: process.env.NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN,
   use: [apiPlugin],
   components: components as SbReactComponentsMap,
