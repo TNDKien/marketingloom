@@ -61,7 +61,7 @@ const Header = ({ blok }) => {
           </li>
           <li>
             <div className="hover-container">
-              <a href="/Interviews" className="hover:text-red">
+              <a href="/interviews" className="hover:text-red">
                 Interviews
               </a>
               <div className="hover-line"></div>
@@ -69,7 +69,7 @@ const Header = ({ blok }) => {
           </li>
           <li>
             <div className="hover-container">
-              <a href="/Artikelen" className="hover:text-red">
+              <a href="/artikelen" className="hover:text-red">
                 Artikelen
               </a>
               <div className="hover-line"></div>
@@ -77,7 +77,7 @@ const Header = ({ blok }) => {
           </li>
           <li>
             <div className="hover-container">
-              <a href="/Evenementen" className="hover:text-red">
+              <a href="/evenementen" className="hover:text-red">
                 Evenementen
               </a>
               <div className="hover-line"></div>
