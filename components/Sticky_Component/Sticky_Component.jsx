@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useState, useRef } from "react";
 import { storyblokEditable } from "@storyblok/react/rsc";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -40,7 +42,7 @@ const Sticky_Component = ({ blok }) => {
   }, [startScroll]);
 
   return (
-    <div className="sticky top-0" ref={stickyRef} {...storyblokEditable(blok)}>
+    <div className="hidden sm:block sticky top-0" ref={stickyRef} {...storyblokEditable(blok)}>
       <div className="p-10">
         <a href="https://twitter.com" className="my-4 flex items-center justify-center w-10 h-10 bg-red text-white rounded-full">
           <FontAwesomeIcon icon={faTwitter} size="L" />

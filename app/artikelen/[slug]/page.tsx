@@ -1,5 +1,6 @@
 import { getStoryblokApi } from "@storyblok/react";
 import Artikel from "@components/Artikel/Artikel";
+import Sticky_Component from "@components/Sticky_Component/Sticky_Component";
 
 export async function getData(slug: string) {
   const storyblokApi = getStoryblokApi();
@@ -22,7 +23,9 @@ export default async function ArticlePage({
 
   return (
     <div>
+      <div>
       <Artikel blok={blok} />
+      </div>
     </div>
   );
 }
