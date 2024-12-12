@@ -24,7 +24,7 @@ const Header = ({ blok }) => {
       {/* nav bar */}
       <nav className="flex justify-between items-center py-4 px-4 sm:px-24">
         <div className="w-3/12">
-          <a href="/Home" className="hover:text-red">
+          <a href="/" className="hover:text-red">
             <img src="/Logo_Loom.svg" alt="Logo" className="sm:w-3/12 W-100%" />
           </a>
         </div>
