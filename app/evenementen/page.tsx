@@ -1,28 +1,28 @@
 "use client";
 
-import { getStoryblokApi } from "@storyblok/react";
+import fetchData from "@utils/fetch-data";
 import StoryblokStory from "@storyblok/react/story";
 
-export async function getData(slug: string) {
-  const storyblokApi = getStoryblokApi();
-  const response = await storyblokApi.get(`cdn/stories/${slug}`, {
-    version: "draft",
-    cv: Date.now(),
-  });
-
-  return response.data;
-}
-
 export default async function EvenementenPage() {
-  const data = await getData("evenementen/home");
+  try {
+    // Fetch the event data using fetchData
+    const { data, status } = await fetchData("/evenementen/home");
 
-  if (!data?.story) {
-    return <div>Content not found.</div>;
+    // Check if the data is valid
+    if (status !== 200 || !data?.story) {
+      throw new Error("Content not found.");
+    }
+
+    // Render the Storyblok story if content is available
+    return (
+      <div>
+        <StoryblokStory story={data.story} />
+      </div>
+    );
+  } catch (error) {
+    console.error("Error loading the evenementen page:", error);
+
+    // Render a fallback UI in case of errors
+    return <div>Error loading content. Please try again later.</div>;
   }
-
-  return (
-    <div>
-      <StoryblokStory story={data.story} />
-    </div>
-  );
 }

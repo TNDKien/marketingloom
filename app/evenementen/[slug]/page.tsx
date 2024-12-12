@@ -1,15 +1,5 @@
-import { getStoryblokApi } from "@storyblok/react";
+import fetchData from "@utils/fetch-data";
 import Evenement from "@components/Evenement/Evenement";
-
-export async function getData(slug: string) {
-  const storyblokApi = getStoryblokApi();
-  const response = await storyblokApi.get(`cdn/stories/evenementen/${slug}`, {
-    version: "draft",
-    cv: Date.now(),
-  });
-  console.log("Storyblok response:", response.data.story);
-  return response.data.story;
-}
 
 export default async function EventPage({
   params,
@@ -17,12 +7,28 @@ export default async function EventPage({
   params: { slug: string };
 }) {
   const { slug } = params;
-  const story = await getData(slug);
-  const blok = story.content;
 
-  return (
-    <div>
-      <Evenement blok={blok} />
-    </div>
-  );
+  try {
+    const { data, status } = await fetchData(`/evenementen/${slug}`);
+
+    if (status !== 200 || !data?.story) {
+      throw new Error(`Event with slug "${slug}" not found.`);
+    }
+
+    const blok = data.story.content;
+
+    return (
+      <div>
+        <Evenement blok={blok} />
+      </div>
+    );
+  } catch (error) {
+    console.error("Error rendering the event page:", error);
+
+    return (
+      <div>
+        <p>Error loading the event. Please try again later.</p>
+      </div>
+    );
+  }
 }
