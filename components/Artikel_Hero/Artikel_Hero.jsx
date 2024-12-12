@@ -17,7 +17,7 @@ const SearchBlock = ({ blok, onSearch }) => {
         <input
           type="text"
           className="ml-6 flex-grow sm:text-label-desktop text-h1-mobile font-semibold focus:outline-none placeholder-black"
-          placeholder="Zoek interview..."
+          placeholder="Zoek..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)} // Houdt de waarde bij
         />
