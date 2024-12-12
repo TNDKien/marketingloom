@@ -1,15 +1,5 @@
-import { getStoryblokApi } from "@storyblok/react";
+import fetchData from "@utils/fetch-data";
 import Interview from "@components/Interview/Interview";
-
-export async function getData(slug: string) {
-  const storyblokApi = getStoryblokApi();
-  const response = await storyblokApi.get(`cdn/stories/interviews/${slug}`, {
-    version: "draft",
-    cv: Date.now(),
-  });
-  console.log("Storyblok response:", response.data.story);
-  return response.data.story;
-}
 
 export default async function InterviewPage({
   params,
@@ -17,12 +7,24 @@ export default async function InterviewPage({
   params: { slug: string };
 }) {
   const { slug } = params;
-  const story = await getData(slug);
-  const blok = story.content;
 
-  return (
-    <div>
-      <Interview blok={blok} />
-    </div>
-  );
+  try {
+    const { data, status } = await fetchData(`/interviews/${slug}`);
+
+    if (status !== 200 || !data?.story) {
+      throw new Error(`Interview with slug "${slug}" not found.`);
+    }
+
+    const blok = data.story.content;
+
+    return (
+      <div>
+        <Interview blok={blok} />
+      </div>
+    );
+  } catch (error) {
+    console.error("Error rendering the interview page:", error);
+
+    return <div>Error loading the interview. Please try again later.</div>;
+  }
 }
