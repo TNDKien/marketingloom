@@ -10,10 +10,10 @@ const Sidebar = ({ blok }) => {
       : blok.artikelen_sidebar_meestgelezen;
 
   return (
-    <div className="flex justify-end w-full bg-gray-100">
+    <div className="sm:pl-6 flex justify-end w-full sm:w-2/6 py-4 bg-gray-100">
       {/* Sidebar */}
       <div
-        className="w-full sm:w-[400px] bg-black sm:bg-white text-white sm:text-black"
+        className="w-full sm:w-[400px] bg-black sm:bg-white text-white sm:text-black flex flex-col h-full"
         {...storyblokEditable(blok)}
       >
         {/* Tabs */}
@@ -55,7 +55,7 @@ const Sidebar = ({ blok }) => {
         </div>
 
         {/* Content */}
-        <div className="px-4 mb-4">
+        <div className="px-4 mb-4 flex-1 overflow-y-auto">
           {artikelen.map((artikel, index) => (
             <a
               key={index}
@@ -88,7 +88,7 @@ const Sidebar = ({ blok }) => {
         </div>
 
         {/* Lees Meer Knop */}
-        <div className="w-full h-[44px] px-4 flex items-center bg-black sm:bg-white">
+        <div className="w-full h-[44px] px-4 flex items-center bg-black sm:bg-white mt-auto">
           <button className="group relative flex items-center text-label-mobile sm:text-label-desktop font-bold text-white sm:text-black cursor-pointer">
             <span className="relative z-10">Lees Meer</span>
             <span className="ml-2 transition-transform duration-300 ease-out group-hover:-translate-x-2 opacity-100 group-hover:opacity-0">

@@ -2,7 +2,7 @@ import { render } from "storyblok-rich-text-react-renderer";
 import { storyblokEditable } from "@storyblok/react/rsc";
 import Looms from "../Looms/Looms";
 
-const Artikel = ({ blok }) => {
+const Interview = ({ blok }) => {
   // Function to render labels with appropriate separators
   const renderLabels = (labels) => {
     if (!labels || labels.length === 0) return null;
@@ -63,4 +63,4 @@ const Artikel = ({ blok }) => {
   );
 };
 
-export default Artikel;
+export default Interview;

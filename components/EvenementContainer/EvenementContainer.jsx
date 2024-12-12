@@ -48,18 +48,18 @@ const EvenementenContainer = ({ blok }) => {
   }, []);
 
   return (
-    <section className="p-6 lg:px-24" {...storyblokEditable(blok)}>
+    <section className="p-4 lg:px-24" {...storyblokEditable(blok)}>
       {/* Filters Section */}
-      <div className="flex flex-wrap items-center justify-between w-full py-4">
-        <div className="flex gap-2">
+      <div className="flex flex-wrap items-center justify-between w-full py-4 ">
+        <div className="flex gap-2 ">
           {/* Filters Button */}
-          <button className="flex items-center gap-2 px-4 py-2 text-sm font-medium">
-            <FaFilter className="text-gray-500" />
+          <button className="flex items-center gap-2 px-4 py-2 text-sm font-medium border-red border-2">
+            <img src="/filter.svg" alt="" />
             Filters
           </button>
 
           {/* Selected Category */}
-          <div className="flex items-center gap-2 px-4 py-2 border-red border-2">
+          <div className=" items-center gap-2 px-4 py-2 border-red border-2 hidden lg:flex">
             <span className="text-sm font-medium">{selectedCategory}</span>
             <button
               onClick={() => setSelectedCategory("Categorie")}
@@ -70,7 +70,7 @@ const EvenementenContainer = ({ blok }) => {
           </div>
 
           {/* Filters Section */}
-          <div className="flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             <button className="text-sm font-medium">Datum</button>
             <button className="text-sm font-medium">Prijs</button>
             <button className="text-sm font-medium">Indeling</button>
@@ -90,12 +90,12 @@ const EvenementenContainer = ({ blok }) => {
       </div>
 
       {/* Event List */}
-      <div className="flex flex-col gap-6 mt-6">
+      <div className="grid gap-6 mt-6 sm:grid-cols-1">
         {evenementen.map((event) => (
           <EvenementTeaser
             key={event.slug}
             event={event}
-            className="w-1/2 h-48 flex-shrink-0"
+            className="w-full h-auto"
           />
         ))}
       </div>

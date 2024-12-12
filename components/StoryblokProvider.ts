@@ -6,6 +6,7 @@ import {
   SbReactComponentsMap,
 } from "@storyblok/react/rsc";
 import Page from "./page.component";
+import Mobile_Ad from "./Mobile_Ad/Mobile_Ad";
 import Template from "./Template/Template";
 import Artikel from "./Artikel/Artikel";
 import Account from "./Account/Account";
@@ -19,7 +20,7 @@ import EvenementContainer from "./EvenementContainer/EvenementContainer";
 import EventHero from "./EventHero/EventHero";
 import EventInfo from "./EventInfo/EventInfo";
 import EvenementTeaser from "./EvenementTeaser/EvenementTeaser";
-import Interview_Container from "./Interview_Container/Interview_Container";
+import Interview from "./Interview/Interview";
 import Nieuwsbrief from "./Nieuwsbrief/Nieuwsbrief";
 import Pagina_Hero from "./Pagina_Hero/Pagina_Hero";
 import Sidebar from "./Sidebar/Sidebar";
@@ -36,11 +37,16 @@ import Artikel_Preview from "./Artikel_Preview/Artikel_Preview";
 import Nieuws_Teaser from "./Nieuws_Teaser/Nieuws_Teaser";
 import Sticky_Ad from "./Sticky_Ad/Sticky_Ad";
 import Button from "./Button/Button";
-
+import Blok_Container from "./Blok_Container/Blok_Container";
+import Line from "./line/Line";
+import Vertical_Ad from "./Vertical_Ad/Vertical_Ad";
+import InterviewContainer from "./InterviewContainer/InterviewContainer";
 
 const components = {
   page: Page,
+  mobile_ad: Mobile_Ad,
   button: Button,
+  vertical_ad: Vertical_Ad,
   artikel_preview: Artikel_Preview,
   template: Template,
   artikel: Artikel,
@@ -56,7 +62,7 @@ const components = {
   eventhero: EventHero,
   eventinfo: EventInfo,
   eyecatcher: Eyecatcher,
-  interview_container: Interview_Container,
+  interview: Interview,
   nieuwsbrief: Nieuwsbrief,
   pagina_hero: Pagina_Hero,
   sidebar: Sidebar,
@@ -70,11 +76,12 @@ const components = {
   artikelteaser: ArtikelTeaser,
   nieuws_teaser: Nieuws_Teaser,
   sticky_ad: Sticky_Ad,
+  blok_container: Blok_Container,
+  line: Line,
+  interviewcontainer: InterviewContainer,
 };
 
 storyblokInit({
-
-  
   accessToken: process.env.NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN,
   use: [apiPlugin],
   components: components as SbReactComponentsMap,

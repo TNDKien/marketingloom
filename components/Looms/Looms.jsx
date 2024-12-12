@@ -1,6 +1,6 @@
 export default function Looms() {
   return (
-    <div className="-z-10 w-full hidden lg:block">
+    <div className="-z-20 w-full hidden lg:block">
       <img
         src="/Lines.svg"
         alt="Loom"
