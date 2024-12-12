@@ -9,7 +9,7 @@ const Tickets = ({ blok }) => {
       {/* Tickets Section */}
       <div className="flex flex-col gap-6 w-full lg:w-1/2">
         {/* Titel */}
-        <h2 className="h2-desktop font-bold text-red">Tickets</h2>
+        <h2 className="text-h2-desktop font-bold text-red">Tickets</h2>
 
         {/* Ticket 1 */}
         <div className="flex flex-row w-full gap-4 border-b-2 border-black items-center py-4">
@@ -17,7 +17,9 @@ const Tickets = ({ blok }) => {
           <p className="h3-desktop font-bold text-black flex-1">Early Bird</p>
 
           {/* Prijs */}
-          <p className="text-label-mobile text-black flex-1 text-center">€ 295,-</p>
+          <p className="text-label-mobile text-black flex-1 text-center">
+            € 295,-
+          </p>
 
           {/* Knop */}
           <button className="bg-red text-white w-[106px] h-[34px] rounded hover:bg-silver label-desktop">
@@ -31,7 +33,9 @@ const Tickets = ({ blok }) => {
           <p className="h3-desktop font-bold text-black flex-1">Regulier</p>
 
           {/* Prijs */}
-          <p className="text-label-mobile text-black flex-1 text-center">€ 345,-</p>
+          <p className="text-label-mobile text-black flex-1 text-center">
+            € 345,-
+          </p>
 
           {/* Knop */}
           <button className="bg-red text-white w-[106px] h-[34px] rounded hover:bg-silver label-desktop">

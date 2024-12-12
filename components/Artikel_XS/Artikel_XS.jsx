@@ -3,9 +3,6 @@ import { storyblokEditable } from "@storyblok/react";
 const Artikel_XS = ({ blok }) => (
   <div className="p-4 bg-black sm:bg-white" {...storyblokEditable(blok)}>
     {/* Artikel */}
-
-    <h1 className="font-sans text-h2-desktop font-semibold mb-4 ">Meest gelezen</h1>
-
     <div
       className="text-white mb-4 flex flex-row group cursor-pointer sm:bg-white sm:text-black sm:max-w-[360px] sm:min-h-[110px]"
       onClick={() => {
