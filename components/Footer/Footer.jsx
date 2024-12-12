@@ -1,7 +1,14 @@
+"use client";
+
 import React, { useState } from "react";
 import { storyblokEditable } from "@storyblok/react/rsc";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTwitter, faFacebookF, faLinkedinIn, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import {
+  faTwitter,
+  faFacebookF,
+  faLinkedinIn,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 
 // SVG Pijltje
 const ArrowIcon = ({ isOpen }) => (
@@ -9,7 +16,9 @@ const ArrowIcon = ({ isOpen }) => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
     fill="white"
-    className={`w-6 h-6 transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+    className={`w-6 h-6 transform transition-transform duration-300 ${
+      isOpen ? "rotate-180" : ""
+    }`}
   >
     <path
       fillRule="evenodd"
@@ -54,15 +63,14 @@ const StaticSection = ({ title, items }) => (
 );
 
 const Footer = ({ blok }) => (
-  <div className="bg-black text-white text-paragraph font-medium p-8" {...storyblokEditable(blok)}>
+  <div
+    className="bg-black text-white text-paragraph font-medium p-8"
+    {...storyblokEditable(blok)}
+  >
     <div className="max-w-screen-xl mx-auto">
       {/* Mobile Header with Logo and Social Media */}
       <div className="flex justify-between items-end mb-8 sm:hidden">
-        <img
-          className="w-28"
-          src={blok.logo.filename}
-          alt={blok.logo.alt}
-        />
+        <img className="w-28" src="/Logo_Loom.svg" alt="" />
         <div className="flex space-x-4">
           <a href="https://twitter.com" className="hover:text-gray-400">
             <FontAwesomeIcon icon={faTwitter} size="xl" />
@@ -84,21 +92,41 @@ const Footer = ({ blok }) => (
         {/* Over TML */}
         <CollapsibleSection
           title="Over TML"
-          items={["TML Code", "Journalistiek jaarverslag", "Werken bij TML", "Colofon"]}
+          items={[
+            "TML Code",
+            "Journalistiek jaarverslag",
+            "Werken bij TML",
+            "Colofon",
+          ]}
         />
         <StaticSection
           title="Over TML"
-          items={["TML Code", "Journalistiek jaarverslag", "Werken bij TML", "Colofon"]}
+          items={[
+            "TML Code",
+            "Journalistiek jaarverslag",
+            "Werken bij TML",
+            "Colofon",
+          ]}
         />
 
         {/* Algemeen */}
         <CollapsibleSection
           title="Algemeen"
-          items={["Algemene voorwaarden", "Cookies", "Copyright", "Responsible Disclosure"]}
+          items={[
+            "Algemene voorwaarden",
+            "Cookies",
+            "Copyright",
+            "Responsible Disclosure",
+          ]}
         />
         <StaticSection
           title="Algemeen"
-          items={["Algemene voorwaarden", "Cookies", "Copyright", "Responsible Disclosure"]}
+          items={[
+            "Algemene voorwaarden",
+            "Cookies",
+            "Copyright",
+            "Responsible Disclosure",
+          ]}
         />
 
         {/* Categorieën */}
@@ -152,11 +180,7 @@ const Footer = ({ blok }) => (
         {/* Static Section with Logo and Social Media */}
         <div className="hidden md:flex flex-col justify-between items-start h-full">
           <div>
-            <img
-              className="w-28"
-              src={blok.logo.filename}
-              alt={blok.logo.alt}
-            />
+            <img className="w-28" src="/Logo_Loom.svg" alt="" />
             <p className="text-red mt-8">Meld je nu aan →</p>
           </div>
           <p className="mt-auto mb-2">Neem contact op</p>

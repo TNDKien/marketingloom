@@ -1,28 +1,27 @@
 "use client";
 
-import { getStoryblokApi } from "@storyblok/react";
+import fetchData from "@utils/fetch-data"; // Update the path as per your project structure
 import StoryblokStory from "@storyblok/react/story";
 
-export async function getData(slug: string) {
-  const storyblokApi = getStoryblokApi();
-  const response = await storyblokApi.get(`cdn/stories/${slug}`, {
-    version: "draft",
-    cv: Date.now(),
-  });
-
-  return response.data;
-}
-
 export default async function ArtikelenPage() {
-  const data = await getData("artikelen/home");
+  try {
+    // Use fetchData to retrieve content
+    const { data, status } = await fetchData("/artikelen/home");
 
-  if (!data?.story) {
-    return <div>Content not found.</div>;
+    if (status !== 200 || !data?.story) {
+      // Handle case where content is not found
+      return <div>Content not found.</div>;
+    }
+
+    return (
+      <div>
+        <StoryblokStory story={data.story} />
+      </div>
+    );
+  } catch (error) {
+    console.error("Error loading the page:", error);
+
+    // Render a fallback UI in case of an error
+    return <div>Error loading content. Please try again later.</div>;
   }
-
-  return (
-    <div>
-      <StoryblokStory story={data.story} />
-    </div>
-  );
 }

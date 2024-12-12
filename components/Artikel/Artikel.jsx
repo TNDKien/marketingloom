@@ -29,8 +29,6 @@ const Artikel = ({ blok }) => {
       className="relative flex flex-col justify-center items-center pt-4 lg:pt-8 font-sans"
       {...storyblokEditable(blok)}
     >
-      {/* Line Groups as Background Elements */}
-      <Looms />
       {/* Header Section */}
       <header className="container px-4 lg:px-0 max-w-[800px] text-center">
         <h1 className="lg:text-3xl text-2xl mb-6 font-semibold text-black">

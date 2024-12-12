@@ -11,10 +11,6 @@ const Evenement = ({ blok }) => {
       className="relative flex flex-col w-full justify-center items-center pt-4 lg:pt-8 font-sans overflow-hidden"
       {...storyblokEditable(blok)}
     >
-      {/* Background Looms */}
-      <Looms />
-      {/* <Header /> */}
-
       {/* Banner Section */}
       <section className="relative w-full h-64 sm:h-96 flex overflow-hidden">
         {/* Background Image */}
@@ -83,9 +79,7 @@ const Evenement = ({ blok }) => {
               </div>
               {/* button */}
               <button className="group relative flex items-center text-sm font-medium font-sans text-white">
-                <span className="relative z-10">
-                  {blok.tekst || "Lees Meer"}
-                </span>
+                <span className="relative z-10">Meld je nu aan!</span>
                 <span className="ml-2 transition-transform duration-300 ease-out group-hover:-translate-x-2 opacity-100 group-hover:opacity-0">
                   →
                 </span>
@@ -137,7 +131,13 @@ const Evenement = ({ blok }) => {
               {blok.locatie}
             </span>
           </div>
-          <a href="">Meld je nu aan!</a>
+          <button className="group relative flex items-center text-sm font-medium font-sans text-black mt-4">
+            <span className="relative z-10">Meld je nu aan!</span>
+            <span className="ml-2 transition-transform duration-300 ease-out group-hover:-translate-x-2 opacity-100 group-hover:opacity-0">
+              →
+            </span>
+            <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-black transition-all duration-300 group-hover:w-3/4"></span>
+          </button>
         </div>
       </div>
 
@@ -161,7 +161,7 @@ const Evenement = ({ blok }) => {
         {/* Introductory Image */}
         <div className="w-full lg:w-1/2 py-6 flex justify-center">
           <img
-            className="max-w-full h-auto object-contain"
+            className="max-w-full"
             src={blok.intro_afbeelding.filename}
             alt={blok.intro_afbeelding.alt || "Intro Image"}
           />
@@ -169,7 +169,7 @@ const Evenement = ({ blok }) => {
       </section>
 
       {/* Sprekers Editie 2025 Section */}
-      <section className="px-24 py-12">
+      <section className=" px-4 lg:px-24 py-12">
         <div className="mb-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-black">
             Sprekers Editie 2025
