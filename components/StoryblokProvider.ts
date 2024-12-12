@@ -38,7 +38,7 @@ import Nieuws_Teaser from "./Nieuws_Teaser/Nieuws_Teaser";
 import Sticky_Ad from "./Sticky_Ad/Sticky_Ad";
 import Button from "./Button/Button";
 import Blok_Container from "./Blok_Container/Blok_Container";
-import Line from "./line/Line";
+import Line from "./Line/Line";
 import Vertical_Ad from "./Vertical_Ad/Vertical_Ad";
 import InterviewContainer from "./InterviewContainer/InterviewContainer";
 
