@@ -24,7 +24,7 @@ export default async function RootLayout({
           <Header blok={{}} />
           <main className="mb-10 mt-28 lg:my-[150px] z-10">{children}</main>
 
-          <Looms />
+          {/* <Looms /> */}
           <Footer blok={{}} />
         </body>
       </html>
