@@ -31,7 +31,7 @@ const Header = ({ blok }) => {
         <ul className="hidden md:flex w-6/12 justify-between text-black text-p-large-desktop">
           <li>
             <div className="hover-container">
-              <a href="/Home" className="hover:text-red">
+              <a href="/" className="hover:text-red">
                 Home
               </a>
               <div className="hover-line"></div>
@@ -88,9 +88,9 @@ const Header = ({ blok }) => {
         {/* Zoek afbeelding en knoppen */}
         <div className="flex items-center">
           <img src="/Zoek.svg" alt="Zoek" className="hidden sm:block" />
-          <button className="hidden sm:block text-white bg-red px-4 py-1 ml-6 text-label-desktop font-semibold">
+          <a href="/account" className="hidden sm:block text-white bg-red px-4 py-1 ml-6 text-label-desktop font-semibold">
             Aboneer
-          </button>
+          </a>
           <img src="/Modus.svg" alt="Modus" className="hidden sm:block ml-6" />
           <img
             src="/Hamburger menu.svg"
@@ -276,29 +276,28 @@ const Header = ({ blok }) => {
             )}
 
             <li className="py-2 font-sans ">
-              <a href="/Interviews">Interviews</a>
+              <a href="/interviews">Interviews</a>
             </li>
             <li className="py-2 font-sans ">
-              <a href="/Artikelen">Artikelen</a>
+              <a href="/artikelen">Artikelen</a>
             </li>
             <li className="py-2 font-sans ">
-              <a href="/Artikelen">Evenementen</a>
+              <a href="/evenementen">Evenementen</a>
             </li>
             <li className="py-2 font-sans">
-              <a href="/Artikelen">Tip de redactie</a>
+              <a href="/account">Tip de redactie</a>
             </li>
 
             {/* Aboneer knop */}
             <div className="flex flex-row justify-between">
-              <button className=" w-32 text-white bg-red px-2 py-1 font-semibold z-3">
+              <a href="/account" className=" w-32 text-white bg-red px-2 py-1 font-semibold z-3">
                 Aboneer
-              </button>
+              </a>
 
               {/* Kleurmodus knop */}
               <img
                 className=""
-                src={blok.modus.filename}
-                alt={blok.modus.alt || "Kleurmodus knop"}
+                src="/Modus.svg"
               />
             </div>
           </ul>
