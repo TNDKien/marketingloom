@@ -161,7 +161,7 @@ const Evenement = ({ blok }) => {
         {/* Introductory Image */}
         <div className="w-full lg:w-1/2 py-6 flex justify-center">
           <img
-            className="max-w-full"
+            className="w-full"
             src={blok.intro_afbeelding.filename}
             alt={blok.intro_afbeelding.alt || "Intro Image"}
           />
