@@ -227,7 +227,7 @@ const Evenement = ({ blok }) => {
             <p className="text-sm text-gray-700 mb-4">
               CEO van Just Eat Takeaway.com en een toonaangevend
               tech-ondernemer. Hij bespreekt hoe digitale platforms en
-              innovatieve strategieën hebben bijgedragen aan het succes ...
+              innovatieve strategieën hebben ...
             </p>
             <a
               href="#"

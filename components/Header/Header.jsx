@@ -88,8 +88,11 @@ const Header = ({ blok }) => {
         {/* Zoek afbeelding en knoppen */}
         <div className="flex items-center">
           <img src="/Zoek.svg" alt="Zoek" className="hidden sm:block" />
-          <a href="/account" className="hidden sm:block text-white bg-red px-4 py-1 ml-6 text-label-desktop font-semibold">
-            Aboneer
+          <a
+            href="/account"
+            className="hidden sm:block text-white bg-red px-4 py-1 ml-6 text-label-desktop font-semibold"
+          >
+            Abonneer
           </a>
           <img src="/Modus.svg" alt="Modus" className="hidden sm:block ml-6" />
           <img
@@ -106,7 +109,7 @@ const Header = ({ blok }) => {
         <div className="sm:hidden bg-black text-white p-4">
           <ul className="flex flex-col">
             <li>
-              <a href="/Home">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
               <button
@@ -290,15 +293,15 @@ const Header = ({ blok }) => {
 
             {/* Aboneer knop */}
             <div className="flex flex-row justify-between">
-              <a href="/account" className=" w-32 text-white bg-red px-2 py-1 font-semibold z-3">
-                Aboneer
+              <a
+                href="/account"
+                className=" w-32 text-white bg-red px-2 py-1 font-semibold z-3"
+              >
+                Abonneer
               </a>
 
               {/* Kleurmodus knop */}
-              <img
-                className=""
-                src="/Modus.svg"
-              />
+              <img className="" src="/Modus.svg" />
             </div>
           </ul>
         </div>
