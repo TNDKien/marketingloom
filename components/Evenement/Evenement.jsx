@@ -351,7 +351,9 @@ const Evenement = ({ blok }) => {
 
         {/* Partner worden Section */}
         <div className="flex flex-col gap-4 w-full lg:w-1/2">
-          <h2 className="text-3xl font-bold text-black">Partner worden?</h2>
+          <h2 className="text-h2-desktop font-bold text-black">
+            Partner worden?
+          </h2>
           <p className="text-lg text-black">
             Als partner van The Marketing Loom, onze toonaangevende
             marketingnieuwswebsite, kun je jouw relevante kennis delen en een

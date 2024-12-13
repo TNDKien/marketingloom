@@ -65,7 +65,7 @@ const Tickets = ({ blok }) => {
       {/* Partner worden Section */}
       <div className="flex flex-col gap-6 w-full lg:w-1/2">
         {/* Titel */}
-        <h2 className="text-2xl font-bold text-red">Partner worden?</h2>
+        <h2 className="text-h2-desktop font-bold text-red">Partner worden?</h2>
 
         {/* Beschrijving */}
         <p className="paragraph lg:p-large-desktop text-black">
