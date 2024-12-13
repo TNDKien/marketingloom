@@ -41,7 +41,7 @@ const EvenementTeaser = ({ event, className, imgClassName }) => {
       </section>
       <section className="flex flex-col gap-2 justify-between lg:w-1/2 my-2 lg:ml-6">
         <div className="flex flex-wrap items-center gap-1 sm:gap-2 text-label-mobile lg:text-base">
-          <span className="flex items-center gap-2">
+          <span className="flex items-center gap-1 sm:gap-2">
             <span
               className="h-4 w-4 bg-black mask"
               style={{
@@ -53,7 +53,7 @@ const EvenementTeaser = ({ event, className, imgClassName }) => {
             ></span>
             {event.datum.split(" ")[0]}
           </span>
-          <span className="flex items-center gap-2">
+          <span className="flex items-center gap-1 sm:gap-2">
             <span
               className="h-4 w-4 bg-black mask"
               style={{
@@ -65,7 +65,7 @@ const EvenementTeaser = ({ event, className, imgClassName }) => {
             ></span>
             {event.tijden}
           </span>
-          <span className="flex items-center gap-2">
+          <span className="flex items-center gap-1 sm:gap-2">
             <span
               className="h-4 w-4 bg-black mask"
               style={{
