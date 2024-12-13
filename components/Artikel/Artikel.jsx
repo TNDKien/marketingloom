@@ -59,8 +59,8 @@ const Artikel = ({ blok }) => {
         </div>
       </div>
       {/* Article Content */}
-      <div className="min-w-full sticky top-0 -mb-[415px]">
-      <Sticky_Component />
+      <div className="min-w-full sticky top-0 md:-mb-[415px]">
+        <Sticky_Component />
       </div>
       <section className="font-serif max-w-[612px] mt-8 px-4 space-y-12 first-letter:font-sans first-letter:text-4xl first-letter:font-bold first-letter:text-red">
         {render(blok.content)}
