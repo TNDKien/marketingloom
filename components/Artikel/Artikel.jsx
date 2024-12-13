@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { render } from "storyblok-rich-text-react-renderer";
 import { storyblokEditable } from "@storyblok/react/rsc";
