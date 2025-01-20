@@ -46,64 +46,64 @@ npm run dev
 
 ### Hanly Trang ([GitHub](https://github.com/hanlyvt))
 
-| Component/File            |
-| ------------------------- |
-| `components/Artikel_Hero` |
-| `components/Header`       |
-| `components/Interview`    |
+| Component/File                                       |
+| ---------------------------------------------------- |
+| [`components/Artikel_Hero`](components/Artikel_Hero) |
+| [`components/Header`](components/Header)             |
+| [`components/Interview`](components/Interview)       |
 
 ### Kien Dang ([GitHub](https://github.com/TNDKien))
 
-| Component/File                    |
-| --------------------------------- |
-| `app/artikelen/[slug]/page.tsx`   |
-| `app/artikelen/page.tsx`          |
-| `app/evenementen/[slug]/page.tsx` |
-| `app/evenementen/page.tsx`        |
-| `components/Artikel`              |
-| `components/ArtikelContainer`     |
-| `components/ArtikelTeaser`        |
-| `components/Evenement`            |
-| `components/EvenementContainer`   |
-| `components/EvenementTeaser`      |
-| `components/EventHero`            |
-| `components/EventInfo`            |
-| `components/InterviewContainer`   |
-| `components/Looms`                |
-| `components/PopulaireArtikelen`   |
-| `components/Template`             |
+| Component/File                                                       |
+| -------------------------------------------------------------------- |
+| [`app/artikelen/[slug]/page.tsx`](app/artikelen/[slug]/page.tsx)     |
+| [`app/artikelen/page.tsx`](app/artikelen/page.tsx)                   |
+| [`app/evenementen/[slug]/page.tsx`](app/evenementen/[slug]/page.tsx) |
+| [`app/evenementen/page.tsx`](app/evenementen/page.tsx)               |
+| [`components/Artikel`](components/Artikel)                           |
+| [`components/ArtikelContainer`](components/ArtikelContainer)         |
+| [`components/ArtikelTeaser`](components/ArtikelTeaser)               |
+| [`components/Evenement`](components/Evenement)                       |
+| [`components/EvenementContainer`](components/EvenementContainer)     |
+| [`components/EvenementTeaser`](components/EvenementTeaser)           |
+| [`components/EventHero`](components/EventHero)                       |
+| [`components/EventInfo`](components/EventInfo)                       |
+| [`components/InterviewContainer`](components/InterviewContainer)     |
+| [`components/Looms`](components/Looms)                               |
+| [`components/PopulaireArtikelen`](components/PopulaireArtikelen)     |
+| [`components/Template`](components/Template)                         |
 
 ### Koen de Raden ([GitHub](https://github.com/koenderaden))
 
-| Component/File              |
-| --------------------------- |
-| `components/Artikel_XS`     |
-| `components/Blok_Container` |
-| `components/Sidebar`        |
-| `components/Tickets`        |
+| Component/File                                           |
+| -------------------------------------------------------- |
+| [`components/Artikel_XS`](components/Artikel_XS)         |
+| [`components/Blok_Container`](components/Blok_Container) |
+| [`components/Sidebar`](components/Sidebar)               |
+| [`components/Tickets`](components/Tickets)               |
 
 ### Marijn Snoeren ([GitHub](https://github.com/Marijn-Snoeren))
 
-| Component/File                   |
-| -------------------------------- |
-| `app/interviews/[slug]/page.tsx` |
-| `app/interviews/page.tsx`        |
-| `components/Account`             |
-| `components/Artikel_Preview`     |
-| `components/Eyecatcher`          |
-| `components/Footer`              |
-| `components/Mobile_Ad`           |
-| `components/Nieuws_Teaser`       |
-| `components/Sticky_Ad`           |
-| `components/Sticky_Component`    |
-| `components/Vertical_Ad`         |
+| Component/File                                                     |
+| ------------------------------------------------------------------ |
+| [`app/interviews/[slug]/page.tsx`](app/interviews/[slug]/page.tsx) |
+| [`app/interviews/page.tsx`](app/interviews/page.tsx)               |
+| [`components/Account`](components/Account)                         |
+| [`components/Artikel_Preview`](components/Artikel_Preview)         |
+| [`components/Eyecatcher`](components/Eyecatcher)                   |
+| [`components/Footer`](components/Footer)                           |
+| [`components/Mobile_Ad`](components/Mobile_Ad)                     |
+| [`components/Nieuws_Teaser`](components/Nieuws_Teaser)             |
+| [`components/Sticky_Ad`](components/Sticky_Ad)                     |
+| [`components/Sticky_Component`](components/Sticky_Component)       |
+| [`components/Vertical_Ad`](components/Vertical_Ad)                 |
 
 ### Merel van der Spaa ([GitHub](https://github.com/merelmae))
 
-| Component/File           |
-| ------------------------ |
-| `components/Button`      |
-| `components/Nieuwsbrief` |
+| Component/File                                     |
+| -------------------------------------------------- |
+| [`components/Button`](components/Button)           |
+| [`components/Nieuwsbrief`](components/Nieuwsbrief) |
 
 ### Project Supervisors
 
