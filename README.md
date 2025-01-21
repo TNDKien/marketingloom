@@ -128,3 +128,7 @@ npm run dev
 - [Pim Willemsen](https://github.com/pimwillems) - Fontys Hogeschool
 - [Pieter Dorst] - Fontys Hogeschool
 - [Ben Kemmeren] - Fontys Hogeschool
+
+## License
+
+This project is proprietary software owned by 2manydots & Fontys University of Applied Sciences.
