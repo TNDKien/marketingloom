@@ -1,5 +1,21 @@
 # Marketing Loom
 
+## Table of Contents
+
+- [About](#about)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Getting Started](#getting-started)
+  - [Installation](#getting-started)
+- [Contributors and Components](#contributors-and-components)
+  - [Hanly Trang](#hanly-trang-github)
+  - [Kien Dang](#kien-dang-github)
+  - [Koen de Raden](#koen-de-raden-github)
+  - [Marijn Snoeren](#marijn-snoeren-github)
+  - [Merel van der Spaa](#merel-van-der-spaa-github)
+- [Project Supervisors](#project-supervisors)
+- [License](#license)
+
 ## About
 
 Marketing Loom is a dynamic news website developed for 2ManyDots as part of a Fontys Hogeschool project. The platform serves as a central hub for marketing professionals to stay updated with the latest industry trends, news, and events in the marketing world.
