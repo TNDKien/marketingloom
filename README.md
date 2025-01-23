@@ -41,7 +41,7 @@ Marketing Loom is a dynamic news website developed for 2ManyDots as part of a Fo
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/2manydots/marketing-loom.git
+git clone https://github.com/TNDKien/marketingloom.git
 ```
 
 2. Install dependencies:
